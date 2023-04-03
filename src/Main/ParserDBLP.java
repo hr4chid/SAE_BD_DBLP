@@ -14,7 +14,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.sql.Connection;;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;;
 
 public class ParserDBLP {
     public static void main(String[] args) {
@@ -41,15 +43,22 @@ public class ParserDBLP {
                 Article article = null;
                 Element dataNode = (Element) dataList.item(i);
 
-                String author = dataNode.getElementsByTagName("author").item(0).getTextContent();
+                List<String> authors = new ArrayList<String>();
+                NodeList authorList = dataNode.getElementsByTagName("author");
+                for (int j = 0; j < authorList.getLength(); j++) {
+                    Element authorNode = (Element) authorList.item(j);
+                    String author = authorNode.getTextContent();
+                    authors.add(author);
+                }
+
                 String title = dataNode.getElementsByTagName("title").item(0).getTextContent();
                 int year = Integer.parseInt(dataNode.getElementsByTagName("year").item(0).getTextContent());
                 String month = dataNode.getElementsByTagName("month").item(0).getTextContent();
                 String ee = dataNode.getElementsByTagName("ee").item(0).getTextContent();
                 String publisher = dataNode.getElementsByTagName("publisher").item(0).getTextContent();
 
-                System.out.println("\nAuthor: " + author + "\nTitle: " + title + "\nYear: " + year + "\nMonth: " + month + "\nEE: " + ee + "\nPublisher: " + publisher + "\n");
-                article = new Article(author, title, year, month, ee, publisher);
+                article = new Article(authors, title, year, month, ee, publisher);
+                System.out.println("\n\n" + article.toString() + "");
                 articlesDAO.insertArticle(article);
             }
         } catch (ParserConfigurationException | SAXException | IOException e) {

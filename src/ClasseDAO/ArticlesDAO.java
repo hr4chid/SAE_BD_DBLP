@@ -5,6 +5,7 @@ import Initializer.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class ArticlesDAO {
     private DBConnector DBconnector;
@@ -17,23 +18,31 @@ public class ArticlesDAO {
 
     public void insertArticle(Article article) throws SQLException {
         try {
-            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.articles (author, title, year, month, ee, publisher) VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.articles (title, year, month, ee, publisher) VALUES (?, ?, ?, ?, ?)", PreparedStatement.RETURN_GENERATED_KEYS);
 
-            preparedStatement.setString(1, article.getAuthor());
-            preparedStatement.setString(2, article.getTitle());
-            preparedStatement.setInt(3, article.getYear());
-            preparedStatement.setString(4, article.getMonth());
-            preparedStatement.setString(5, article.getEe());
-            preparedStatement.setString(6, article.getPublisher());
+            preparedStatement.setString(1, article.getTitle());
+            preparedStatement.setInt(2, article.getYear());
+            preparedStatement.setString(3, article.getMonth());
+            preparedStatement.setString(4, article.getEe());
+            preparedStatement.setString(5, article.getPublisher());
 
             preparedStatement.executeUpdate();
+
+            // Récupération de l'id de l'article inséré
+            int articleId;
+            try (var generatedKeys = preparedStatement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    articleId = generatedKeys.getInt(1);
+                } else {
+                    throw new SQLException("La récupération de l'ID de l'article a échoué.");
+                }
+            }
             System.out.println("Insertion réussie !" + "\n\n");
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 }
 
 

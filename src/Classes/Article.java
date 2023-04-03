@@ -1,16 +1,18 @@
 package Classes;
 
+import java.util.List;
+
 public class Article {
 
-    private String author;
+    private List <String> authors;
     private String title;
     private int year;
     private String month;
     private String ee;
     private String publisher;
 
-    public Article(String author, String title, int year, String month, String ee, String publisher) {
-        this.author = author;
+    public Article(List <String> author, String title, int year, String month, String ee, String publisher) {
+        this.authors = author;
         this.title = title;
         this.year = year;
         this.month = month;
@@ -18,8 +20,8 @@ public class Article {
         this.publisher = publisher;
     }
 
-    public String getAuthor() {
-        return author;
+    public List<String> getAuthors() {
+        return authors;
     }
 
     public String getTitle() {
@@ -45,7 +47,7 @@ public class Article {
     @Override
     public String toString() {
         return "Article{" +
-                "author='" + author + '\'' +
+                "author='" + authors + '\'' +
                 ", title='" + title + '\'' +
                 ", year=" + year +
                 ", month='" + month + '\'' +

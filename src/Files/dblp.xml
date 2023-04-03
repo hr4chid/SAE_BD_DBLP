@@ -18,4 +18,21 @@
         <ee type="oa">https://doi.org/10.21227/081t-dj23</ee>
         <publisher>IEEE DataPort</publisher>
     </data>
+    <data mdate="2023-03-15" key="data/10/KimK22">
+        <author orcid="0000-0001-7505-7931">TaeYoung Kim</author>
+        <author orcid="0000-0002-0608-5397">Hyung-Jong Kim</author>
+        <title>Experimental dataset for the Performance Evaluation for Geographically Distributed Blockchain-based Services in a Cloud Computing Environment.</title>
+        <year>2022</year>
+        <month>January</month>
+        <ee>https://doi.org/10.21227/b7mg-yb75</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Godio21">
+        <author>Simone Godio</author>
+        <title>Visual Inertial Odometry Sensor Fusion Approach for Autonomous Localization.</title>
+        <year>2021</year>
+        <month>April</month>
+        <ee>https://doi.org/10.21227/10av-kj18</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
 </dblp>
