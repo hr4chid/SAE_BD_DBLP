@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE dblp SYSTEM "https://dblp.uni-trier.de/xml/dblp.dtd">
 <dblp>
-
     <data mdate="2023-03-15" key="data/10/Lu22c">
         <author orcid="0000-0001-9742-4173">Peggy Joy Lu</author>
         <title>MI3.</title>
@@ -10,5 +9,13 @@
         <ee>https://doi.org/10.21227/0ndm-6g50</ee>
         <publisher>IEEE DataPort</publisher>
     </data>
-
+    <data mdate="2023-03-15" key="data/10/HomoliakH22">
+        <author orcid="0000-0002-0790-0875">Ivan Homoliak</author>
+        <author orcid="0000-0001-5507-0768">Petr Han&aacute;cek</author>
+        <title>ASNM Datasets: A Collection of Network Traffic Data for Testing of Adversarial Classifiers and Network Intrusion Detectors.</title>
+        <year>2022</year>
+        <month>May</month>
+        <ee type="oa">https://doi.org/10.21227/081t-dj23</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
 </dblp>

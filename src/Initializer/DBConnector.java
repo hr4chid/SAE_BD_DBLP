@@ -32,7 +32,6 @@ public class DBConnector {
         Class.forName("org.postgresql.Driver");
         try {
             connect = DriverManager.getConnection(getUrl(), getUser(), getPassword());
-            System.out.println("\n Connexion établie avec succès !\n\n");
         }
         catch(SQLException e) {
             System.out.println(e.getMessage());
