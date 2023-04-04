@@ -1,7 +1,9 @@
 package Main;
 
 import ClasseDAO.ArticlesDAO;
+import ClasseDAO.AutheurDAO;
 import Classes.Article;
+import Classes.Autheur;
 import Initializer.DBConnector;
 import Initializer.LoadXML;
 
@@ -36,9 +38,10 @@ public class ParserDBLP {
             document.getDocumentElement().normalize();
 
 
-            // Traitement fichier XML ici
-            ArticlesDAO articlesDAO = new ArticlesDAO();
+            // Traitement des articles
+            /*ArticlesDAO articlesDAO = new ArticlesDAO();
             NodeList dataList = document.getElementsByTagName("data");
+
             for (int i = 0; i < dataList.getLength(); i++) {
                 Article article = null;
                 Element dataNode = (Element) dataList.item(i);
@@ -60,7 +63,28 @@ public class ParserDBLP {
                 article = new Article(authors, title, year, month, ee, publisher);
                 System.out.println("\n\n" + article.toString() + "");
                 articlesDAO.insertArticle(article);
+            }*/
+
+            // Traitement des autheurs
+            AutheurDAO autheurDAO = new AutheurDAO();
+            NodeList dblpList = document.getElementsByTagName("dblp");
+
+            for(int k = 0; k < dblpList.getLength(); k++){
+                Element dblpNode = (Element) dblpList.item(k);
+
+                NodeList authorList = dblpNode.getElementsByTagName("author");
+                for(int i = 0; i < authorList.getLength(); i++) {
+                    Autheur autheur = null;
+
+                    String author = authorList.item(i).getTextContent();
+                    autheur = new Autheur(author, 1, 5, null);
+                    System.out.println("\n" + author + "\n");
+                    autheurDAO.insertAutheur(autheur);
+                }
             }
+
+
+
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         } catch (NumberFormatException e) {

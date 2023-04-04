@@ -5,7 +5,6 @@ import Initializer.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.List;
 
 public class ArticlesDAO {
     private DBConnector DBconnector;
@@ -27,16 +26,6 @@ public class ArticlesDAO {
             preparedStatement.setString(5, article.getPublisher());
 
             preparedStatement.executeUpdate();
-
-            // Récupération de l'id de l'article inséré
-            int articleId;
-            try (var generatedKeys = preparedStatement.getGeneratedKeys()) {
-                if (generatedKeys.next()) {
-                    articleId = generatedKeys.getInt(1);
-                } else {
-                    throw new SQLException("La récupération de l'ID de l'article a échoué.");
-                }
-            }
             System.out.println("Insertion réussie !" + "\n\n");
 
         } catch (SQLException e) {

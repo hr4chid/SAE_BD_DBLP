@@ -35,4 +35,18 @@
         <ee>https://doi.org/10.21227/10av-kj18</ee>
         <publisher>IEEE DataPort</publisher>
     </data>
+    <article mdate="2017-05-20" key="journals/tkde/SiaCC07">
+        <author>Ka Cheung Sia</author>
+        <author>Junghoo Cho</author>
+        <author>Hyun-Kyu Cho</author>
+        <title>Efficient Monitoring Algorithm for Fast News Alerts.</title>
+        <pages>950-961</pages>
+        <year>2007</year>
+        <volume>19</volume>
+        <journal>IEEE Trans. Knowl. Data Eng.</journal>
+        <number>7</number>
+        <ee>https://doi.org/10.1109/TKDE.2007.1041</ee>
+        <ee>http://doi.ieeecomputersociety.org/10.1109/TKDE.2007.1041</ee>
+        <url>db/journals/tkde/tkde19.html#SiaCC07</url>
+    </article>
 </dblp>
