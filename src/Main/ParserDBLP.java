@@ -39,34 +39,45 @@ public class ParserDBLP {
 
 
             // Traitement des articles
-            /*ArticlesDAO articlesDAO = new ArticlesDAO();
-            NodeList dataList = document.getElementsByTagName("data");
+            ArticlesDAO articlesDAO = new ArticlesDAO();
+            NodeList articleList = document.getElementsByTagName("article");
 
-            for (int i = 0; i < dataList.getLength(); i++) {
+            for (int i = 0; i < articleList.getLength(); i++) {
                 Article article = null;
-                Element dataNode = (Element) dataList.item(i);
+                Element articleNode = (Element) articleList.item(i);
 
                 List<String> authors = new ArrayList<String>();
-                NodeList authorList = dataNode.getElementsByTagName("author");
+                NodeList authorList = articleNode.getElementsByTagName("author");
                 for (int j = 0; j < authorList.getLength(); j++) {
                     Element authorNode = (Element) authorList.item(j);
                     String author = authorNode.getTextContent();
                     authors.add(author);
                 }
 
-                String title = dataNode.getElementsByTagName("title").item(0).getTextContent();
-                int year = Integer.parseInt(dataNode.getElementsByTagName("year").item(0).getTextContent());
-                String month = dataNode.getElementsByTagName("month").item(0).getTextContent();
-                String ee = dataNode.getElementsByTagName("ee").item(0).getTextContent();
-                String publisher = dataNode.getElementsByTagName("publisher").item(0).getTextContent();
+                String title = articleNode.getElementsByTagName("title").item(0).getTextContent();
+                int pages = Integer.parseInt(articleNode.getElementsByTagName("pages").item(0).getTextContent());
+                int year = Integer.parseInt(articleNode.getElementsByTagName("year").item(0).getTextContent());
+                int volume = Integer.parseInt(articleNode.getElementsByTagName("volume").item(0).getTextContent());
+                String journal = articleNode.getElementsByTagName("journal").item(0).getTextContent();
+                int number = Integer.parseInt(articleNode.getElementsByTagName("number").item(0).getTextContent());
 
-                article = new Article(authors, title, year, month, ee, publisher);
+                List<String> ees = new ArrayList<String>();
+                NodeList eeList = articleNode.getElementsByTagName("ee");
+                for (int y = 0; y < eeList.getLength(); y++) {
+                    Element eeNode = (Element) authorList.item(y);
+                    String ee = eeNode.getTextContent();
+                    ees.add(ee);
+                }
+
+                String url = articleNode.getElementsByTagName("url").item(0).getTextContent();
+
+                article = new Article(authors, title, pages, year, volume, journal, number, ees, url);
                 System.out.println("\n\n" + article.toString() + "");
-                articlesDAO.insertArticle(article);
-            }*/
+                //articlesDAO.insertArticle(article);
+            }
 
             // Traitement des autheurs
-            AutheurDAO autheurDAO = new AutheurDAO();
+            /*AutheurDAO autheurDAO = new AutheurDAO();
             NodeList dblpList = document.getElementsByTagName("dblp");
 
             for(int k = 0; k < dblpList.getLength(); k++){
@@ -81,8 +92,7 @@ public class ParserDBLP {
                     System.out.println("\n" + author + "\n");
                     autheurDAO.insertAutheur(autheur);
                 }
-            }
-
+            }*/
 
 
         } catch (ParserConfigurationException | SAXException | IOException e) {

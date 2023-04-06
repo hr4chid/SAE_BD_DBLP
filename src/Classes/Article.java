@@ -1,59 +1,86 @@
 package Classes;
 
+import java.sql.Array;
 import java.util.List;
 
 public class Article {
-
-    private List <String> authors;
+    private List<String> author;
     private String title;
-    private int year;
-    private String month;
-    private String ee;
-    private String publisher;
 
-    public Article(List <String> author, String title, int year, String month, String ee, String publisher) {
-        this.authors = author;
+    private int pages;
+    private int year;
+
+    private int volume;
+
+    private String journal;
+
+    private int number;
+    private List<String> ee;
+
+    private String url;
+
+    public Article(List<String> author, String title, int page, int year, int volume, String journal, int number, List<String> ee, String url) {
+        this.author = author;
         this.title = title;
+        this.pages = page;
         this.year = year;
-        this.month = month;
+        this.volume = volume;
+        this.journal = journal;
+        this.number = number;
         this.ee = ee;
-        this.publisher = publisher;
+        this.url = url;
     }
 
-    public List<String> getAuthors() {
-        return authors;
+    public Array getAuthor() {
+        return (Array) author;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public int getPage() {
+        return pages;
+    }
+
     public int getYear() {
         return year;
     }
 
-    public String getMonth() {
-        return month;
+    public int getVolume() {
+        return volume;
     }
 
-    public String getEe() {
+    public String getJournal() {
+        return journal;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public List<String> getEe() {
         return ee;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getUrl() {
+        return url;
     }
 
     @Override
     public String toString() {
         return "Article{" +
-                "author='" + authors + '\'' +
+                "author=" + author +
                 ", title='" + title + '\'' +
+                ", page=" + pages +
                 ", year=" + year +
-                ", month='" + month + '\'' +
-                ", ee='" + ee + '\'' +
-                ", publisher='" + publisher + '\'' +
+                ", volume=" + volume +
+                ", journal='" + journal + '\'' +
+                ", number=" + number +
+                ", ee=" + ee +
+                ", url='" + url + '\'' +
                 '}';
     }
+
 
 }
