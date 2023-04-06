@@ -55,7 +55,19 @@ public class ParserDBLP {
                 }
 
                 String title = articleNode.getElementsByTagName("title").item(0).getTextContent();
-                int pages = Integer.parseInt(articleNode.getElementsByTagName("pages").item(0).getTextContent());
+
+                String pagesString = articleNode.getElementsByTagName("pages").item(0).getTextContent();
+                int startPage;
+                int endPage;
+                String[] pageNumbers = pagesString.split("-");
+                if (pageNumbers.length == 2 && pageNumbers[0].matches("\\d+") && pageNumbers[1].matches("\\d+")) {
+                    startPage = Integer.parseInt(pageNumbers[0]);
+                    endPage = Integer.parseInt(pageNumbers[1]);
+                } else {
+                    System.err.println("Invalid pages format in XML file: " + pagesString);
+                    continue; // Passe à l'article suivant
+                }
+
                 int year = Integer.parseInt(articleNode.getElementsByTagName("year").item(0).getTextContent());
                 int volume = Integer.parseInt(articleNode.getElementsByTagName("volume").item(0).getTextContent());
                 String journal = articleNode.getElementsByTagName("journal").item(0).getTextContent();
@@ -71,9 +83,9 @@ public class ParserDBLP {
 
                 String url = articleNode.getElementsByTagName("url").item(0).getTextContent();
 
-                article = new Article(authors, title, pages, year, volume, journal, number, ees, url);
-                System.out.println("\n\n" + article.toString() + "");
-                //articlesDAO.insertArticle(article);
+                article = new Article(authors, title, year, volume, journal, number, ees, url, startPage, endPage);
+                //System.out.println("\n\n" + article.toString() + "");
+                articlesDAO.insertArticle(article);
             }
 
             // Traitement des autheurs
@@ -90,7 +102,7 @@ public class ParserDBLP {
                     String author = authorList.item(i).getTextContent();
                     autheur = new Autheur(author, 1, 5, null);
                     System.out.println("\n" + author + "\n");
-                    autheurDAO.insertAutheur(autheur);
+                    //autheurDAO.insertAutheur(autheur);
                 }
             }*/
 
