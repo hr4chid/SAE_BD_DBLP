@@ -18,6 +18,10 @@ public class Autheur {
         compteur++;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -37,7 +41,8 @@ public class Autheur {
     @Override
     public String toString() {
         return "Autheur{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", firstpaper=" + firstpaper +
                 ", lastpaper=" + lastpaper +
                 ", affiliation=" + affiliation +

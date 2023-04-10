@@ -49,4 +49,12 @@
         <ee>http://doi.ieeecomputersociety.org/10.1109/TKDE.2007.1041</ee>
         <url>db/journals/tkde/tkde19.html#SiaCC07</url>
     </article>
+    <phdthesis mdate="2002-01-03" key="phd/Olken93">
+        <author>Frank Olken</author>
+        <title>Random Sampling from Databases</title>
+        <year>1993</year>
+        <school>University of California at Berkeley</school>
+        <publisher>LBL Technical Report</publisher>
+        <number>LBL-32883</number>
+    </phdthesis>
 </dblp>

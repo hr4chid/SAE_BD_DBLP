@@ -17,12 +17,13 @@ public class AutheurDAO {
 
     public void insertAutheur(Autheur autheur) throws SQLException {
         try {
-            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.authors (name, firstpaper, lastpaper, affiliation) VALUES (?, ?, ?, ?)");
+            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.authors (id, name, firstpaper, lastpaper, affiliation) VALUES (?, ?, ?, ?, ?)");
 
-            preparedStatement.setString(1, autheur.getName());
-            preparedStatement.setInt(2, autheur.getFirstpaper());
-            preparedStatement.setInt(3, autheur.getLastpaper());
-            preparedStatement.setInt(4, autheur.getAffiliation().getId());
+            preparedStatement.setInt(1, autheur.getId());
+            preparedStatement.setString(2, autheur.getName());
+            preparedStatement.setInt(3, autheur.getFirstpaper());
+            preparedStatement.setInt(4, autheur.getLastpaper());
+            //preparedStatement.setNull(5, null);
 
             preparedStatement.executeUpdate();
             System.out.println("Insertion réussie !" + "\n\n");

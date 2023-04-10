@@ -1,9 +1,7 @@
 package Main;
 
-import ClasseDAO.ArticlesDAO;
-import ClasseDAO.AutheurDAO;
-import Classes.Article;
-import Classes.Autheur;
+import ClasseDAO.PublicationDAO;
+import Classes.Publication;
 import Initializer.DBConnector;
 import Initializer.LoadXML;
 
@@ -37,56 +35,97 @@ public class ParserDBLP {
             Document document = LoadXML.loadXML(dataFile);
             document.getDocumentElement().normalize();
 
+            // Traitement des publications
+            PublicationDAO publicationDAO = new PublicationDAO();
+            NodeList dblpList = document.getElementsByTagName("dblp");
+                for (int i = 0; i < dblpList.getLength(); i++) {
+                    Element dblpNode = (Element) dblpList.item(i);
 
-            // Traitement des articles
-            ArticlesDAO articlesDAO = new ArticlesDAO();
-            NodeList articleList = document.getElementsByTagName("article");
+                    // Publications des datas
+                    NodeList dataList = dblpNode.getElementsByTagName("data");
+                    for (int j = 0; j < dataList.getLength(); j++) {
+                        Publication publicationData = null;
+                        Element dataNode = (Element) dataList.item(j);
 
-            for (int i = 0; i < articleList.getLength(); i++) {
-                Article article = null;
-                Element articleNode = (Element) articleList.item(i);
+                        String titleData = dataNode.getElementsByTagName("title").item(0).getTextContent();
+                        int yearData = Integer.parseInt(dataNode.getElementsByTagName("year").item(0).getTextContent());
+                        String venueData = dataNode.getElementsByTagName("publisher").item(0).getTextContent();
 
-                List<String> authors = new ArrayList<String>();
-                NodeList authorList = articleNode.getElementsByTagName("author");
-                for (int j = 0; j < authorList.getLength(); j++) {
-                    Element authorNode = (Element) authorList.item(j);
-                    String author = authorNode.getTextContent();
-                    authors.add(author);
+                        NodeList authorDataList = dataNode.getElementsByTagName("author");
+                        int nbAuthorsData = authorDataList.getLength();
+
+                        NodeList nodeList = dataNode.getElementsByTagName("ee");
+                        Element eeElement = (Element) nodeList.item(0);
+                        String typeData = null;
+                        if (!eeElement.getAttribute("type").isEmpty()) {
+                            typeData = eeElement.getAttribute("type");
+                        }
+
+                        publicationData = new Publication(titleData, yearData, venueData, nbAuthorsData, typeData);
+                        System.out.println("\n" + publicationData.toString());
+                        //publicationDAO.insertPublication(publicationData);
+                    }
+
+                    // Publications des articles
+                    NodeList articleList = dblpNode.getElementsByTagName("article");
+                    for (int a = 0; a < articleList.getLength(); a++) {
+                        Publication publicationArticle = null;
+                        Element ArticleNode = (Element) articleList.item(a);
+
+                        String titleArticle = ArticleNode.getElementsByTagName("title").item(0).getTextContent();
+                        int yearArticle = Integer.parseInt(ArticleNode.getElementsByTagName("year").item(0).getTextContent());
+
+                        NodeList journalList = ArticleNode.getElementsByTagName("journal");
+                        String venueArticle;
+                        if (journalList.getLength() > 0) {
+                            venueArticle = journalList.item(0).getTextContent();
+                        } else {
+                            venueArticle = null;
+                        }
+
+                        NodeList authorArticleList = ArticleNode.getElementsByTagName("author");
+                        int nbAuthorsArticle = authorArticleList.getLength();
+
+                        NodeList nodeList = ArticleNode.getElementsByTagName("ee");
+                        Element eeElement = (Element) nodeList.item(0);
+                        String typeArticle = null;
+                        if (!eeElement.getAttribute("type").isEmpty()) {
+                            typeArticle = eeElement.getAttribute("type");
+                        }
+
+                        publicationArticle = new Publication(titleArticle, yearArticle, venueArticle, nbAuthorsArticle, typeArticle);
+                        System.out.println("\n" + publicationArticle.toString());
+                        //publicationDAO.insertPublication(publicationArticle);
+                    }
+
+                    // Publications des phdthesis
+                    NodeList phdthesisList = dblpNode.getElementsByTagName("phdthesis");
+                    for (int z = 0; z < phdthesisList.getLength(); z++) {
+                        Publication publicationPhdthesis = null;
+                        Element phdthesisNode = (Element) phdthesisList.item(z);
+
+                        String titlePhdthesis = phdthesisNode.getElementsByTagName("title").item(0).getTextContent();
+                        int yearPhdthesis = Integer.parseInt(phdthesisNode.getElementsByTagName("year").item(0).getTextContent());
+
+                        NodeList publisherList = phdthesisNode.getElementsByTagName("publisher");
+                        String venuePhdthesis;
+                        if (publisherList.getLength() > 0) {
+                            venuePhdthesis = publisherList.item(0).getTextContent();
+                        } else {
+                            venuePhdthesis = null;
+                        }
+
+                        NodeList authorPhdthesisList = phdthesisNode.getElementsByTagName("author");
+                        int nbAuthorsPhdthesis = authorPhdthesisList.getLength();
+
+                        publicationPhdthesis = new Publication(titlePhdthesis, yearPhdthesis, venuePhdthesis, nbAuthorsPhdthesis, null);
+                        System.out.println("\n" + publicationPhdthesis.toString());
+                        publicationDAO.insertPublication(publicationPhdthesis);
+                    }
+
                 }
 
-                String title = articleNode.getElementsByTagName("title").item(0).getTextContent();
 
-                String pagesString = articleNode.getElementsByTagName("pages").item(0).getTextContent();
-                int startPage;
-                int endPage;
-                String[] pageNumbers = pagesString.split("-");
-                if (pageNumbers.length == 2 && pageNumbers[0].matches("\\d+") && pageNumbers[1].matches("\\d+")) {
-                    startPage = Integer.parseInt(pageNumbers[0]);
-                    endPage = Integer.parseInt(pageNumbers[1]);
-                } else {
-                    System.err.println("Invalid pages format in XML file: " + pagesString);
-                    continue; // Passe à l'article suivant
-                }
-
-                int year = Integer.parseInt(articleNode.getElementsByTagName("year").item(0).getTextContent());
-                int volume = Integer.parseInt(articleNode.getElementsByTagName("volume").item(0).getTextContent());
-                String journal = articleNode.getElementsByTagName("journal").item(0).getTextContent();
-                int number = Integer.parseInt(articleNode.getElementsByTagName("number").item(0).getTextContent());
-
-                List<String> ees = new ArrayList<String>();
-                NodeList eeList = articleNode.getElementsByTagName("ee");
-                for (int y = 0; y < eeList.getLength(); y++) {
-                    Element eeNode = (Element) authorList.item(y);
-                    String ee = eeNode.getTextContent();
-                    ees.add(ee);
-                }
-
-                String url = articleNode.getElementsByTagName("url").item(0).getTextContent();
-
-                article = new Article(authors, title, year, volume, journal, number, ees, url, startPage, endPage);
-                //System.out.println("\n\n" + article.toString() + "");
-                articlesDAO.insertArticle(article);
-            }
 
             // Traitement des autheurs
             /*AutheurDAO autheurDAO = new AutheurDAO();
@@ -100,12 +139,11 @@ public class ParserDBLP {
                     Autheur autheur = null;
 
                     String author = authorList.item(i).getTextContent();
-                    autheur = new Autheur(author, 1, 5, null);
-                    System.out.println("\n" + author + "\n");
-                    //autheurDAO.insertAutheur(autheur);
+                    autheur = new Autheur(author, 1, 1, null);
+                    System.out.println("\n" + author);
+                    autheurDAO.insertAutheur(autheur);
                 }
             }*/
-
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
