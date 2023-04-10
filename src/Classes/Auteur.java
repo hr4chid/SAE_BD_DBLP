@@ -1,15 +1,15 @@
 package Classes;
 
-public class Autheur {
+public class Auteur {
 
     private static int compteur = 1;
     private int id;
     private String name;
     private int firstpaper;
     private int lastpaper;
-    private Affiliation affiliation;
+    private int affiliation;
 
-    public Autheur(String name, int firstpaper, int lastpaper, Affiliation affiliation) {
+    public Auteur(String name, int firstpaper, int lastpaper, int affiliation) {
         this.id = compteur;
         this.name = name;
         this.firstpaper = firstpaper;
@@ -34,13 +34,13 @@ public class Autheur {
         return lastpaper;
     }
 
-    public Affiliation getAffiliation() {
+    public int getAffiliation() {
         return affiliation;
     }
 
     @Override
     public String toString() {
-        return "Autheur{" +
+        return "Auteur{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", firstpaper=" + firstpaper +

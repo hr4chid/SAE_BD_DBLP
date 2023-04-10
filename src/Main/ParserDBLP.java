@@ -1,8 +1,10 @@
 package Main;
 
 import ClasseDAO.AffiliationDAO;
+import ClasseDAO.AuteurDAO;
 import ClasseDAO.PublicationDAO;
 import Classes.Affiliation;
+import Classes.Auteur;
 import Classes.Publication;
 import Initializer.DBConnector;
 import Initializer.LoadXML;
@@ -18,7 +20,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ParserDBLP {
     public static void main(String[] args) {
@@ -40,6 +44,7 @@ public class ParserDBLP {
             // Traitement des données
             PublicationDAO publicationDAO = new PublicationDAO();
             AffiliationDAO affiliationDAO = new AffiliationDAO();
+            AuteurDAO autheurDAO = new AuteurDAO();
 
             NodeList dblpList = document.getElementsByTagName("dblp");
                 for (int i = 0; i < dblpList.getLength(); i++) {
@@ -61,7 +66,7 @@ public class ParserDBLP {
 
                         publicationData = new Publication(titleData, yearData, venueData, nbAuthorsData, typeData);
                         System.out.println("\n" + publicationData.toString());
-                        //publicationDAO.insertPublication(publicationData);
+                        publicationDAO.insertPublication(publicationData);
                     }
 
 
@@ -88,7 +93,7 @@ public class ParserDBLP {
 
                         publicationArticle = new Publication(titleArticle, yearArticle, venueArticle, nbAuthorsArticle, typeArticle);
                         System.out.println("\n" + publicationArticle.toString());
-                        //publicationDAO.insertPublication(publicationArticle);
+                        publicationDAO.insertPublication(publicationArticle);
                     }
 
 
@@ -115,7 +120,7 @@ public class ParserDBLP {
 
                         publicationPhdthesis = new Publication(titlePhdthesis, yearPhdthesis, venuePhdthesis, nbAuthorsPhdthesis, typePhdthesis);
                         System.out.println("\n" + publicationPhdthesis.toString());
-                        //publicationDAO.insertPublication(publicationPhdthesis);
+                        publicationDAO.insertPublication(publicationPhdthesis);
                     }
 
 
@@ -142,7 +147,7 @@ public class ParserDBLP {
 
                         publicationBook = new Publication(titleBook, yearBook, venueBook, nbAuthorsBook, typePhdthesis);
                         System.out.println("\n" + publicationBook.toString());
-                        //publicationDAO.insertPublication(publicationBook);
+                        publicationDAO.insertPublication(publicationBook);
                     }
 
 
@@ -169,7 +174,7 @@ public class ParserDBLP {
 
                         publicationIncollection = new Publication(titleIncollection, yearIncollection, venueIncollection, nbAuthorsauthorIncollection, typeIncollection);
                         System.out.println("\n" + publicationIncollection.toString());
-                        //publicationDAO.insertPublication(publicationIncollection);
+                        publicationDAO.insertPublication(publicationIncollection);
                     }
 
 
@@ -202,7 +207,7 @@ public class ParserDBLP {
 
                         publicationWww = new Publication(titleWww, yearWww, venueWww, nbAuthorsWww, typeWww);
                         System.out.println("\n" + publicationWww.toString());
-                        //publicationDAO.insertPublication(publicationWww);
+                        publicationDAO.insertPublication(publicationWww);
                     }
 
 
@@ -229,7 +234,7 @@ public class ParserDBLP {
 
                         publicationInproceedings = new Publication(titleInproceedings, yearInproceedings, venueInproceedings, nbAuthorInproceedings, typeInproceedings);
                         System.out.println("\n" + publicationInproceedings.toString());
-                        //publicationDAO.insertPublication(publicationInproceedings);
+                        publicationDAO.insertPublication(publicationInproceedings);
                     }
 
 
@@ -249,7 +254,7 @@ public class ParserDBLP {
 
                         publicationMastersthesis = new Publication(titleMastersthesis, yearMastersthesis, venueMastersthesis, nbAuthorMastersthesis, typeMastersthesis);
                         System.out.println("\n" + publicationMastersthesis.toString());
-                        //publicationDAO.insertPublication(publicationMastersthesis);
+                        publicationDAO.insertPublication(publicationMastersthesis);
                     }
 
 
@@ -282,7 +287,7 @@ public class ParserDBLP {
 
                         publicationProceedings = new Publication(titleProceedings, yearProceedings, venueProceedings, nbAuthorsProceedings, typeProceedings);
                         System.out.println("\n" + publicationProceedings.toString());
-                        //publicationDAO.insertPublication(publicationProceedings);
+                        publicationDAO.insertPublication(publicationProceedings);
                     }
 
 
@@ -310,13 +315,25 @@ public class ParserDBLP {
                     }
 
 
-                    // Traitement des autheurs
-                    NodeList nodeList = dblpNode.getElementsByTagName("note");
-                    for (int z = 0; z < nodeList.getLength(); z++) {
+                    // Traitement des auteurs
+                    NodeList nodeAuteursList = dblpNode.getElementsByTagName("author");
+                    List<Auteur> auteurs = new ArrayList<Auteur>();
 
+                    for (int l = 0; l < nodeAuteursList.getLength(); l++) {
+                        Node auteurNode = nodeAuteursList.item(l);
+
+                        String nom = auteurNode.getTextContent();
+                        Auteur auteur = new Auteur(nom, 0, 0, 0);
+                        auteurs.add(auteur);
+                    }
+
+                    for (Auteur auteur : auteurs) {
+                        System.out.println("\n" + auteur.toString());
+                        autheurDAO.insertAutheur(auteur);
                     }
 
                 }
+
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
@@ -326,6 +343,5 @@ public class ParserDBLP {
             e.printStackTrace();
         }
     }
-
 
 }
