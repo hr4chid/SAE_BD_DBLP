@@ -3,7 +3,7 @@ package Classes;
 public class Affiliation {
 
     private static int compteur = 1;
-    private int id;
+    private Integer id;
     private String name;
     private String country;
 
@@ -14,7 +14,7 @@ public class Affiliation {
         compteur++;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

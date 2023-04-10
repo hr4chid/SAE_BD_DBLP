@@ -3,14 +3,14 @@ package Classes;
 public class Publication {
 
     private static int compteur = 1;
-    private int id;
+    private Integer id;
     private String title;
-    private int year;
+    private Integer year;
     private String venue;
-    private int nbAuthors;
+    private Integer nbAuthors;
     private String type;
 
-    public Publication(String title, int year, String venue, int nbAuthors, String type) {
+    public Publication(String title, Integer year, String venue, Integer nbAuthors, String type) {
         this.id = compteur;
         this.title = title;
         this.year = year;
@@ -20,7 +20,7 @@ public class Publication {
         compteur++;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -28,7 +28,7 @@ public class Publication {
         return title;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
@@ -36,7 +36,7 @@ public class Publication {
         return venue;
     }
 
-    public int getNbAuthors() {
+    public Integer getNbAuthors() {
         return nbAuthors;
     }
 

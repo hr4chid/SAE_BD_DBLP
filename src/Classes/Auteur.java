@@ -3,11 +3,11 @@ package Classes;
 public class Auteur {
 
     private static int compteur = 1;
-    private int id;
+    private Integer id;
     private String name;
-    private int firstpaper;
-    private int lastpaper;
-    private int affiliation;
+    private Integer firstpaper;
+    private Integer lastpaper;
+    private Integer affiliation;
 
     public Auteur(String name, int firstpaper, int lastpaper, int affiliation) {
         this.id = compteur;
@@ -18,7 +18,7 @@ public class Auteur {
         compteur++;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -26,15 +26,15 @@ public class Auteur {
         return name;
     }
 
-    public int getFirstpaper() {
+    public Integer getFirstpaper() {
         return firstpaper;
     }
 
-    public int getLastpaper() {
+    public Integer getLastpaper() {
         return lastpaper;
     }
 
-    public int getAffiliation() {
+    public Integer getAffiliation() {
         return affiliation;
     }
 
