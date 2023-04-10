@@ -1,12 +1,15 @@
 package Main;
 
+import ClasseDAO.AffiliationDAO;
 import ClasseDAO.PublicationDAO;
+import Classes.Affiliation;
 import Classes.Publication;
 import Initializer.DBConnector;
 import Initializer.LoadXML;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -15,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.sql.Connection;
+import java.util.Arrays;
 
 public class ParserDBLP {
     public static void main(String[] args) {
@@ -33,13 +37,15 @@ public class ParserDBLP {
             Document document = LoadXML.loadXML(dataFile);
             document.getDocumentElement().normalize();
 
-            // Traitement des publications
+            // Traitement des données
             PublicationDAO publicationDAO = new PublicationDAO();
+            AffiliationDAO affiliationDAO = new AffiliationDAO();
+
             NodeList dblpList = document.getElementsByTagName("dblp");
                 for (int i = 0; i < dblpList.getLength(); i++) {
                     Element dblpNode = (Element) dblpList.item(i);
 
-                    // Publications des datas
+                    // Traitement publications des datas
                     NodeList dataList = dblpNode.getElementsByTagName("data");
                     for (int j = 0; j < dataList.getLength(); j++) {
                         Publication publicationData = null;
@@ -59,7 +65,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des articles
+                    // Traitement publications des articles
                     NodeList articleList = dblpNode.getElementsByTagName("article");
                     for (int a = 0; a < articleList.getLength(); a++) {
                         Publication publicationArticle = null;
@@ -86,7 +92,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des phdthesis
+                    // Traitement publications des phdthesis
                     NodeList phdthesisList = dblpNode.getElementsByTagName("phdthesis");
                     for (int z = 0; z < phdthesisList.getLength(); z++) {
                         Publication publicationPhdthesis = null;
@@ -113,7 +119,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des books
+                    // Traitement publications des books
                     NodeList bookList = dblpNode.getElementsByTagName("book");
                     for (int b = 0; b < bookList.getLength(); b++) {
                         Publication publicationBook = null;
@@ -140,7 +146,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des incollections
+                    // Traitement publications des incollections
                     NodeList incollectionList = dblpNode.getElementsByTagName("incollection");
                     for (int c = 0; c < incollectionList.getLength(); c++) {
                         Publication publicationIncollection = null;
@@ -167,7 +173,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des wwws
+                    // Traitement publications des wwws
                     NodeList wwwList = dblpNode.getElementsByTagName("www");
                     for (int w = 0; w < wwwList.getLength(); w++) {
                         Publication publicationWww = null;
@@ -200,7 +206,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des inproceedings
+                    // Traitement publications des inproceedings
                     NodeList inproceedingsList = dblpNode.getElementsByTagName("inproceedings");
                     for (int p = 0; p < inproceedingsList.getLength(); p++) {
                         Publication publicationInproceedings = null;
@@ -227,7 +233,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des mastersthesis
+                    // Traitement publications des mastersthesis
                     NodeList mastersthesisList = dblpNode.getElementsByTagName("mastersthesis");
                     for (int m = 0; m < mastersthesisList.getLength(); m++) {
                         Publication publicationMastersthesis = null;
@@ -247,7 +253,7 @@ public class ParserDBLP {
                     }
 
 
-                    // Publications des proceedings
+                    // Traitement publications des proceedings
                     NodeList proceedingsList = dblpNode.getElementsByTagName("proceedings");
                     for (int d = 0; d < proceedingsList.getLength(); d++) {
                         Publication publicationProceedings = null;
@@ -276,29 +282,41 @@ public class ParserDBLP {
 
                         publicationProceedings = new Publication(titleProceedings, yearProceedings, venueProceedings, nbAuthorsProceedings, typeProceedings);
                         System.out.println("\n" + publicationProceedings.toString());
-                        publicationDAO.insertPublication(publicationProceedings);
+                        //publicationDAO.insertPublication(publicationProceedings);
+                    }
+
+
+                    // Traitement des affiliations
+                    NodeList nodeAffiliationList = dblpNode.getElementsByTagName("note");
+                    for (int z = 0; z < nodeAffiliationList.getLength(); z++) {
+                        Affiliation affiliation = null;
+                        Node node = nodeAffiliationList.item(z);
+
+                        if (node.getNodeType() == Node.ELEMENT_NODE) {
+                            Element element = (Element) node;
+                            String type = element.getAttribute("type");
+                            if (type.equals("affiliation")) {
+                                String aff = element.getTextContent();
+
+                                String[] parts = aff.split(",");
+                                String nameAffiliation = String.join(",", Arrays.copyOfRange(parts, 0, parts.length - 1)).trim(); // La variable name sera "University of Tokyo, School of Engineering, Department of Bioengineering, Tokyo"
+                                String countryAffiliation = parts[parts.length - 1].trim();
+
+                                affiliation = new Affiliation(nameAffiliation, countryAffiliation);
+                                System.out.println("\n" + affiliation.toString());
+                                affiliationDAO.insertAffiliation(affiliation);
+                            }
+                        }
+                    }
+
+
+                    // Traitement des autheurs
+                    NodeList nodeList = dblpNode.getElementsByTagName("note");
+                    for (int z = 0; z < nodeList.getLength(); z++) {
+
                     }
 
                 }
-
-
-            // Traitement des autheurs
-            /*AutheurDAO autheurDAO = new AutheurDAO();
-            NodeList dblpList = document.getElementsByTagName("dblp");
-
-            for(int k = 0; k < dblpList.getLength(); k++){
-                Element dblpNode = (Element) dblpList.item(k);
-
-                NodeList authorList = dblpNode.getElementsByTagName("author");
-                for(int i = 0; i < authorList.getLength(); i++) {
-                    Autheur autheur = null;
-
-                    String author = authorList.item(i).getTextContent();
-                    autheur = new Autheur(author, 1, 1, null);
-                    System.out.println("\n" + author);
-                    autheurDAO.insertAutheur(autheur);
-                }
-            }*/
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
