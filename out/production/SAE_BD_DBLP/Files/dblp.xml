@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE dblp SYSTEM "https://dblp.uni-trier.de/xml/dblp.dtd">
 <dblp>
-    <data mdate="2023-03-15" key="data/10/Lu22c">
-        <author orcid="0000-0001-9742-4173">Peggy Joy Lu</author>
-        <title>MI3.</title>
-        <year>2022</year>
-        <month>May</month>
-        <ee>https://doi.org/10.21227/0ndm-6g50</ee>
-        <publisher>IEEE DataPort</publisher>
-    </data>
-    <data mdate="2023-03-15" key="data/10/HomoliakH22">
-        <author orcid="0000-0002-0790-0875">Ivan Homoliak</author>
-        <author orcid="0000-0001-5507-0768">Petr Han&aacute;cek</author>
-        <title>ASNM Datasets: A Collection of Network Traffic Data for Testing of Adversarial Classifiers and Network Intrusion Detectors.</title>
-        <year>2022</year>
-        <month>May</month>
-        <ee type="oa">https://doi.org/10.21227/081t-dj23</ee>
-        <publisher>IEEE DataPort</publisher>
-    </data>
     <data mdate="2023-03-15" key="data/10/KimK22">
         <author orcid="0000-0001-7505-7931">TaeYoung Kim</author>
         <author orcid="0000-0002-0608-5397">Hyung-Jong Kim</author>
@@ -25,14 +8,6 @@
         <year>2022</year>
         <month>January</month>
         <ee>https://doi.org/10.21227/b7mg-yb75</ee>
-        <publisher>IEEE DataPort</publisher>
-    </data>
-    <data mdate="2023-03-15" key="data/10/Godio21">
-        <author>Simone Godio</author>
-        <title>Visual Inertial Odometry Sensor Fusion Approach for Autonomous Localization.</title>
-        <year>2021</year>
-        <month>April</month>
-        <ee>https://doi.org/10.21227/10av-kj18</ee>
         <publisher>IEEE DataPort</publisher>
     </data>
     <article mdate="2017-05-20" key="journals/tkde/SiaCC07">
@@ -49,4 +24,75 @@
         <ee>http://doi.ieeecomputersociety.org/10.1109/TKDE.2007.1041</ee>
         <url>db/journals/tkde/tkde19.html#SiaCC07</url>
     </article>
+    <phdthesis mdate="2002-01-03" key="phd/Olken93">
+        <author>Frank Olken</author>
+        <title>Random Sampling from Databases</title>
+        <year>1993</year>
+        <school>University of California at Berkeley</school>
+        <publisher>LBL Technical Report</publisher>
+        <number>LBL-32883</number>
+    </phdthesis>
+    <book mdate="2021-07-17" key="phd/dnb/Schaeffler95">
+        <author>Veronika Schaeffler</author>
+        <title>Wissensbasierte Planung einer Krankenhausverpflegung dargestellt am Beispiel der Di&auml;tverpflegung f&uuml;r Diabetiker.</title>
+        <year>1995</year>
+        <pages>1-167</pages>
+        <publisher>GSF-Forschungszentrum f&uuml;r Umwelt und Gesundheit</publisher>
+        <school>Technical University Munich, Germany</school>
+        <ee>https://d-nb.info/944429890</ee>
+    </book>
+    <incollection mdate="2017-05-16" key="reference/sp/Parker15">
+        <author>Lynne Parker</author>
+        <title>Collective Manipulation and Construction.</title>
+        <pages>1395-1406</pages>
+        <year>2015</year>
+        <booktitle>Handbook of Computational Intelligence</booktitle>
+        <ee>https://doi.org/10.1007/978-3-662-43505-2_72</ee>
+        <crossref>reference/sp/2015ci</crossref>
+        <url>db/reference/sp/ci2015.html#Parker15</url>
+    </incollection>
+    <www mdate="2017-09-27" key="homepages/180/3112">
+        <author>Annette M. C. Ficker</author>
+        <title>Home Page</title>
+        <note type="affiliation">KU Leuven, Faculty of Economics and Business, Operations Research Group, Belgium</note>
+    </www>
+    <www mdate="2016-10-21" key="www/de/kts">
+        <editor>Klaus Tschira</editor>
+        <title>Klaus Tschira Stiftung gemeinn&uuml;tzige GmbH, KTS</title>
+        <ee>http://www.klaus-tschira-stiftung.de/</ee>
+        <year>2012</year>
+    </www>
+    <inproceedings mdate="2017-05-25" key="conf/coopis/AbdellatifCL04">
+        <author>Takoua Abdellatif</author>
+        <author>Emmanuel Cecchet</author>
+        <author>Renaud Lachaize</author>
+        <title>Evaluation of a Group Communication Middleware for Clustered J2EE Application Servers.</title>
+        <pages>1571-1589</pages>
+        <ee>https://doi.org/10.1007/978-3-540-30469-2_46</ee>
+        <year>2004</year>
+        <crossref>conf/coopis/2004-2</crossref>
+        <booktitle>CoopIS/DOA/ODBASE (2)</booktitle>
+        <url>db/conf/coopis/coopis2004-2.html#AbdellatifCL04</url>
+    </inproceedings>
+    <mastersthesis mdate="2022-01-07" key="phd/basesearch/MohamedElmalaki14">
+        <author>Salma Hosni Emam Mohamed Elmalaki</author>
+        <title>Context-Aware Runtime Engine For Android Operating System.</title>
+        <year>2014</year>
+        <school>University of California, Los Angeles, USA</school>
+        <ee>http://www.escholarship.org/uc/item/2f74g5mw</ee>
+        <ee>http://n2t.net/ark:/13030/m5p57w6d</ee>
+        <ee>https://www.base-search.net/Record/54d9a40cafc81fb89093ac17e2a9a5b0392f205c196faccfcbbb14ffb9d5d088</ee>
+        <note type="source">base-search.net (ftcdlib:qt2f74g5mw)</note>
+    </mastersthesis>
+    <proceedings mdate="2020-03-27" key="reference/genetic/2015">
+        <editor orcid="0000-0002-2798-0104">Amir Hossein Gandomi</editor>
+        <editor orcid="0000-0002-7593-8509">Amir Hossein Alavi</editor>
+        <editor orcid="0000-0002-7002-5815">Conor Ryan</editor>
+        <title>Handbook of Genetic Programming Applications</title>
+        <publisher>Springer</publisher>
+        <year>2015</year>
+        <isbn>978-3-319-20882-4</isbn>
+        <ee>https://doi.org/10.1007/978-3-319-20883-1</ee>
+        <url>db/reference/genetic/genetic2015.html</url>
+    </proceedings>
 </dblp>
