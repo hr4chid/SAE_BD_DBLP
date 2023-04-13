@@ -42,7 +42,7 @@ public class AffiliationDAO {
                 preparedStatement.setString(2, affiliation.getName());
                 preparedStatement.setString(3, affiliation.getCountry());
                 preparedStatement.executeUpdate();
-                System.out.println("Insertion réussie !" + "\n\n");
+                System.out.println("Affiliation inséréé avec succès !");
             } else {
                 System.out.println("L'affiliation existe déjà dans la base de données !");
             }

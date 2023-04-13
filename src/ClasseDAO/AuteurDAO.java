@@ -26,19 +26,18 @@ public class AuteurDAO {
 
     public void insertAutheur(Auteur author) throws SQLException {
         if (!authorExists(author.getId())) {
-            String query = "INSERT INTO dblp.authors (id, name, firstpaper, lastpaper, affiliation) VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO dblp.authors (id, name, firstpaper, lastpaper, affiliation) VALUES (?, ?, null, null, null)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, author.getId());
             preparedStatement.setString(2, author.getName());
-            preparedStatement.setInt(3, author.getFirstpaper());
-            preparedStatement.setInt(4, author.getLastpaper());
-            preparedStatement.setInt(5, author.getAffiliation());
             preparedStatement.executeUpdate();
+
+            System.out.println("Auteur inséré avec succès !");
+
         } else {
-            System.out.println("Auteur avec l'identifiant " + author.getId() + " existe déjà dans la base de données !");
+            System.out.println("L'auteur avec l'identifiant " + author.getId() + " existe déjà dans la base de données !");
         }
     }
-
 
 
     public Integer getIdAuteur(String nom) throws SQLException {
