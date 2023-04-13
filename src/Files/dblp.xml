@@ -111,4 +111,12 @@
         <ee>https://doi.org/10.1007/978-3-319-20883-1</ee>
         <url>db/reference/genetic/genetic2015.html</url>
     </proceedings>
+    <data mdate="2023-03-15" key="data/10/Zerara21">
+        <author>Mohamed Zerara</author>
+        <title>Water consumption.</title>
+        <year>2021</year>
+        <month>July</month>
+        <ee>https://doi.org/10.21227/a64c-tv13</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
 </dblp>

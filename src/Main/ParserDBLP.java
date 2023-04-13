@@ -1,10 +1,7 @@
 package Main;
 
 import ClasseDAO.*;
-import Classes.Affiliation;
-import Classes.Auteur;
-import Classes.Publication;
-import Classes.PublicationDetails;
+import Classes.*;
 import Initializer.DBConnector;
 import Initializer.LoadXML;
 
@@ -45,11 +42,55 @@ public class ParserDBLP {
             AffiliationDAO affiliationDAO = new AffiliationDAO();
             AuteurDAO autheurDAO = new AuteurDAO();
             PublicationDetailsDAO publicationDetailsDAO = new PublicationDetailsDAO();
+            PublicationAuthorsDAO publicationAuthorsDAO = new PublicationAuthorsDAO();
             CoAuthorsDAO coAuthorsDAO = new CoAuthorsDAO();
 
             NodeList dblpList = document.getElementsByTagName("dblp");
                 for (int i = 0; i < dblpList.getLength(); i++) {
                     Element dblpNode = (Element) dblpList.item(i);
+
+
+                    // Traitement des auteurs
+                    NodeList nodeAuteursList = dblpNode.getElementsByTagName("author");
+                    List<Auteur> auteurs = new ArrayList<Auteur>();
+
+                    for (int l = 0; l < nodeAuteursList.getLength(); l++) {
+                        Node auteurNode = nodeAuteursList.item(l);
+
+                        String nom = auteurNode.getTextContent();
+                        Auteur auteur = new Auteur(nom, 0, 0, 0);
+                        auteurs.add(auteur);
+                    }
+
+                    for (Auteur auteur : auteurs) {
+                        System.out.println("\n" + auteur.toString());
+                        autheurDAO.insertAutheur(auteur);
+                    }
+
+
+                    // Traitement des affiliations
+                    NodeList nodeAffiliationList = dblpNode.getElementsByTagName("note");
+                    for (int z = 0; z < nodeAffiliationList.getLength(); z++) {
+                        Affiliation affiliation = null;
+                        Node node = nodeAffiliationList.item(z);
+
+                        if (node.getNodeType() == Node.ELEMENT_NODE) {
+                            Element element = (Element) node;
+                            String type = element.getAttribute("type");
+                            if (type.equals("affiliation")) {
+                                String aff = element.getTextContent();
+
+                                String[] parts = aff.split(",");
+                                String nameAffiliation = String.join(",", Arrays.copyOfRange(parts, 0, parts.length - 1)).trim(); // La variable name sera "University of Tokyo, School of Engineering, Department of Bioengineering, Tokyo"
+                                String countryAffiliation = parts[parts.length - 1].trim();
+
+                                affiliation = new Affiliation(nameAffiliation, countryAffiliation);
+                                System.out.println("\n" + affiliation.toString());
+                                affiliationDAO.insertAffiliation(affiliation);
+                            }
+                        }
+                    }
+
 
                     // Traitement publications des datas
                     NodeList dataList = dblpNode.getElementsByTagName("data");
@@ -69,6 +110,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationData.toString());
                         publicationDAO.insertPublication(publicationData);
 
+                        // Traitement publications auteurs des datas
+                        PublicationAuthors publicationAuthors = null;
+                        for(int u = 0; u < authorDataList.getLength(); u++){
+                            Element authorNode = (Element) authorDataList.item(u);
+                            String authorData = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorData);
+                            int publicationID = publicationData.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des datas en détails
                         PublicationDetails publicationDetailsData = null;
                         String mdateData = dataNode.getAttribute("mdate");
@@ -77,6 +132,7 @@ public class ParserDBLP {
                         publicationDetailsData = new PublicationDetails(publicationData.getId(), nbAuthorsData, mdateData, keyData);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsData);
                     }
+
 
 
                     // Traitement publications des articles
@@ -103,6 +159,20 @@ public class ParserDBLP {
                         publicationArticle = new Publication(titleArticle, yearArticle, venueArticle, nbAuthorsArticle, typeArticle);
                         System.out.println("\n" + publicationArticle.toString());
                         publicationDAO.insertPublication(publicationArticle);
+
+                        // Traitement publications auteurs des articles
+                        PublicationAuthors publicationAuthors = null;
+                        for(int r = 0; r < authorArticleList.getLength(); r++){
+                            Element authorNode = (Element) authorArticleList.item(r);
+                            String authorArticle = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorArticle);
+                            int publicationID = publicationArticle.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
 
                         // Traitement publications des articles en détails
                         PublicationDetails publicationDetailsArticle = null;
@@ -139,6 +209,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationPhdthesis.toString());
                         publicationDAO.insertPublication(publicationPhdthesis);
 
+                        // Traitement publications auteurs des phpthesis
+                        PublicationAuthors publicationAuthors = null;
+                        for(int f = 0; f < authorPhdthesisList.getLength(); f++){
+                            Element authorNode = (Element) authorPhdthesisList.item(f);
+                            String authorPhdthesis = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorPhdthesis);
+                            int publicationID = publicationPhdthesis.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des phdthesis en détails
                         PublicationDetails publicationDetailsPhdthesis = null;
                         String mdatePhdthesis = phdthesisNode.getAttribute("mdate");
@@ -147,6 +231,7 @@ public class ParserDBLP {
                         publicationDetailsPhdthesis = new PublicationDetails(publicationPhdthesis.getId(), nbAuthorsPhdthesis, mdatePhdthesis, keyPhdthesis);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsPhdthesis);
                     }
+
 
 
                     // Traitement publications des books
@@ -174,6 +259,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationBook.toString());
                         publicationDAO.insertPublication(publicationBook);
 
+                        // Traitement publications auteurs des books
+                        PublicationAuthors publicationAuthors = null;
+                        for(int q = 0; q < authorBookList.getLength(); q++){
+                            Element authorNode = (Element) authorBookList.item(q);
+                            String authorBook = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorBook);
+                            int publicationID = publicationBook.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des books en détails
                         PublicationDetails publicationDetailsBook = null;
                         String mdateBook = bookNode.getAttribute("mdate");
@@ -182,6 +281,7 @@ public class ParserDBLP {
                         publicationDetailsBook = new PublicationDetails(publicationBook.getId(), nbAuthorsBook, mdateBook, keyBook);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsBook);
                     }
+
 
 
                     // Traitement publications des incollections
@@ -209,6 +309,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationIncollection.toString());
                         publicationDAO.insertPublication(publicationIncollection);
 
+                        // Traitement publications auteurs des incollections
+                        PublicationAuthors publicationAuthors = null;
+                        for(int m = 0; m < authorIncollectionList.getLength(); m++){
+                            Element authorNode = (Element) authorIncollectionList.item(m);
+                            String authorIncollection = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorIncollection);
+                            int publicationID = publicationIncollection.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des incollections en détails
                         PublicationDetails publicationDetailsIncollection = null;
                         String mdateIncollection = incollectionNode.getAttribute("mdate");
@@ -217,6 +331,7 @@ public class ParserDBLP {
                         publicationDetailsIncollection = new PublicationDetails(publicationIncollection.getId(), nbAuthorsauthorIncollection, mdateIncollection, keyIncollection);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsIncollection);
                     }
+
 
 
                     // Traitement publications des wwws
@@ -250,6 +365,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationWww.toString());
                         publicationDAO.insertPublication(publicationWww);
 
+                        // Traitement publications auteurs des wwws
+                        PublicationAuthors publicationAuthors = null;
+                        for(int g = 0; g < authorWwwList.getLength(); g++){
+                            Element authorNode = (Element) authorWwwList.item(g);
+                            String authorWww = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorWww);
+                            int publicationID = publicationWww.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des wwws en détails
                         PublicationDetails publicationDetailsWww = null;
                         String mdateWww = wwwNode.getAttribute("mdate");
@@ -258,6 +387,7 @@ public class ParserDBLP {
                         publicationDetailsWww = new PublicationDetails(publicationWww.getId(), nbAuthorsWww, mdateWww, keyWww);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsWww);
                     }
+
 
 
                     // Traitement publications des inproceedings
@@ -285,6 +415,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationInproceedings.toString());
                         publicationDAO.insertPublication(publicationInproceedings);
 
+                        // Traitement publications auteurs des inproceedings
+                        PublicationAuthors publicationAuthors = null;
+                        for(int s = 0; s < authorinproceedingsList.getLength(); s++){
+                            Element authorNode = (Element) authorinproceedingsList.item(s);
+                            String authorInproceeding = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorInproceeding);
+                            int publicationID = publicationInproceedings.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des inproceedings en détails
                         PublicationDetails publicationDetailsInproceedings = null;
                         String mdateInproceedings = inproceedingsNode.getAttribute("mdate");
@@ -293,6 +437,7 @@ public class ParserDBLP {
                         publicationDetailsInproceedings = new PublicationDetails(publicationInproceedings.getId(), nbAuthorInproceedings, mdateInproceedings, keyInproceedings);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsInproceedings);
                     }
+
 
 
                     // Traitement publications des mastersthesis
@@ -313,6 +458,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationMastersthesis.toString());
                         publicationDAO.insertPublication(publicationMastersthesis);
 
+                        // Traitement publications auteurs des mastersthesis
+                        PublicationAuthors publicationAuthors = null;
+                        for(int t = 0; t < authorMastersthesisList.getLength(); t++){
+                            Element authorNode = (Element) authorMastersthesisList.item(t);
+                            String authorMastersthesis = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorMastersthesis);
+                            int publicationID = publicationMastersthesis.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des mastersthesis en détails
                         PublicationDetails publicationDetailsMastersthesis = null;
                         String mdateMastersthesis = mastersthesisNode.getAttribute("mdate");
@@ -321,6 +480,7 @@ public class ParserDBLP {
                         publicationDetailsMastersthesis = new PublicationDetails(publicationMastersthesis.getId(), nbAuthorMastersthesis, mdateMastersthesis, keyMastersthesis);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsMastersthesis);
                     }
+
 
 
                     // Traitement publications des proceedings
@@ -354,6 +514,20 @@ public class ParserDBLP {
                         System.out.println("\n" + publicationProceedings.toString());
                         publicationDAO.insertPublication(publicationProceedings);
 
+                        // Traitement publications auteurs des proceedings
+                        PublicationAuthors publicationAuthors = null;
+                        for(int t = 0; t < authorProceedingsList.getLength(); t++){
+                            Element authorNode = (Element) authorProceedingsList.item(t);
+                            String authorProceedings = authorNode.getTextContent();
+
+                            int authorID = autheurDAO.getIdAuteur(authorProceedings);
+                            int publicationID = publicationProceedings.getId();
+
+                            publicationAuthors = new PublicationAuthors(authorID, publicationID);
+                            System.out.println("\n" + publicationAuthors.toString());
+                            publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
+                        }
+
                         // Traitement publications des proceedings en détails
                         PublicationDetails publicationDetailsProceedings = null;
                         String mdateProceedings = proceedingsNode.getAttribute("mdate");
@@ -361,48 +535,6 @@ public class ParserDBLP {
 
                         publicationDetailsProceedings = new PublicationDetails(publicationProceedings.getId(), nbAuthorsProceedings, mdateProceedings, keyProceedings);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsProceedings);
-                    }
-
-
-                    // Traitement des affiliations
-                    NodeList nodeAffiliationList = dblpNode.getElementsByTagName("note");
-                    for (int z = 0; z < nodeAffiliationList.getLength(); z++) {
-                        Affiliation affiliation = null;
-                        Node node = nodeAffiliationList.item(z);
-
-                        if (node.getNodeType() == Node.ELEMENT_NODE) {
-                            Element element = (Element) node;
-                            String type = element.getAttribute("type");
-                            if (type.equals("affiliation")) {
-                                String aff = element.getTextContent();
-
-                                String[] parts = aff.split(",");
-                                String nameAffiliation = String.join(",", Arrays.copyOfRange(parts, 0, parts.length - 1)).trim(); // La variable name sera "University of Tokyo, School of Engineering, Department of Bioengineering, Tokyo"
-                                String countryAffiliation = parts[parts.length - 1].trim();
-
-                                affiliation = new Affiliation(nameAffiliation, countryAffiliation);
-                                System.out.println("\n" + affiliation.toString());
-                                affiliationDAO.insertAffiliation(affiliation);
-                            }
-                        }
-                    }
-
-
-                    // Traitement des auteurs
-                    NodeList nodeAuteursList = dblpNode.getElementsByTagName("author");
-                    List<Auteur> auteurs = new ArrayList<Auteur>();
-
-                    for (int l = 0; l < nodeAuteursList.getLength(); l++) {
-                        Node auteurNode = nodeAuteursList.item(l);
-
-                        String nom = auteurNode.getTextContent();
-                        Auteur auteur = new Auteur(nom, 0, 0, 0);
-                        auteurs.add(auteur);
-                    }
-
-                    for (Auteur auteur : auteurs) {
-                        System.out.println("\n" + auteur.toString());
-                        autheurDAO.insertAutheur(auteur);
                     }
 
                 }

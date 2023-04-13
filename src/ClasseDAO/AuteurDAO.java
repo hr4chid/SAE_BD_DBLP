@@ -4,6 +4,7 @@ import Classes.Auteur;
 import Initializer.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AuteurDAO {
@@ -29,4 +30,27 @@ public class AuteurDAO {
             e.printStackTrace();
         }
     }
+
+    public Integer getIdAuteur(String nom) throws SQLException {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        Integer id = null;
+        try {
+            preparedStatement = this.connection.prepareStatement("SELECT id FROM dblp.authors WHERE name = ?");
+            preparedStatement.setString(1, nom);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                id = resultSet.getInt("id");
+                System.out.println("\n" + "Récupération de l'id réussie !");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+
+
 }
+
