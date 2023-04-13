@@ -35,7 +35,7 @@ public class AuteurDAO {
             preparedStatement.setInt(5, author.getAffiliation());
             preparedStatement.executeUpdate();
         } else {
-            System.out.println("Auteur avec l'identifiant " + author.getId() + " existe déjà dans la base de données.");
+            System.out.println("Auteur avec l'identifiant " + author.getId() + " existe déjà dans la base de données !");
         }
     }
 

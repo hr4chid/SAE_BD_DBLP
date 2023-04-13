@@ -44,7 +44,7 @@ public class AffiliationDAO {
                 preparedStatement.executeUpdate();
                 System.out.println("Insertion réussie !" + "\n\n");
             } else {
-                System.out.println("L'affiliation existe déjà dans la base de données.");
+                System.out.println("L'affiliation existe déjà dans la base de données !");
             }
         } catch (SQLException e) {
             e.printStackTrace();

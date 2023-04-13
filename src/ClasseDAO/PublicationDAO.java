@@ -35,7 +35,7 @@ public class PublicationDAO {
             if (rowsInserted > 0) {
                 System.out.println("Publication insérée avec succès.");
             } else {
-                System.out.println("La publication existe déjà dans la base de données.");
+                System.out.println("La publication existe déjà dans la base de données !");
             }
         } catch (SQLException e) {
             e.printStackTrace();
