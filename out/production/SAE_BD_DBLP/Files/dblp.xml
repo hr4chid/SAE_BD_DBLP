@@ -111,4 +111,16 @@
         <ee>https://doi.org/10.1007/978-3-319-20883-1</ee>
         <url>db/reference/genetic/genetic2015.html</url>
     </proceedings>
+    <data mdate="2023-03-15" key="data/10/OuLLHP23">
+        <author>Qiang Ou</author>
+        <author>Longfu Luo</author>
+        <author>Yong Li 0016</author>
+        <author>Rong Han</author>
+        <author>Yanjian Peng</author>
+        <title>An Improved Radial Buckling Analysis Method and Test Investigation for Power Transformer under Short Circuit Impact.</title>
+        <year>2023</year>
+        <month>February</month>
+        <ee>https://doi.org/10.21227/t80s-ha24</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
 </dblp>

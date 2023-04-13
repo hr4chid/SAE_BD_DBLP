@@ -4,6 +4,7 @@ import Classes.PublicationAuthors;
 import Initializer.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PublicationAuthorsDAO {
@@ -23,7 +24,7 @@ public class PublicationAuthorsDAO {
             preparedStatement.setInt(2, publicationAuthors.getPublicationId());
 
             preparedStatement.executeUpdate();
-            System.out.println("Publication auteurs insertion réussie !");
+            System.out.println("PublicationAuthors insertion réussie !");
 
         } catch (SQLException e) {
             e.printStackTrace();

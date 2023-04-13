@@ -533,10 +533,14 @@ public class ParserDBLP {
                     publicationDetailsProceedings = new PublicationDetails(publicationProceedings.getId(), nbAuthorsProceedings, mdateProceedings, keyProceedings);
                     publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsProceedings);
                 }
+
+
+
+                // Traitement des CoAuthors
+                coAuthorsDAO.insertCoAuthors();
             }
 
         } catch (SQLException ex) {
-            throw new RuntimeException(ex);
         } catch (UnsupportedEncodingException ex) {
             throw new RuntimeException(ex);
         } catch (ParserConfigurationException ex) {
