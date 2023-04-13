@@ -51,7 +51,7 @@ public class AuteurDAO {
 
             if (resultSet.next()) {
                 id = resultSet.getInt("id");
-                System.out.println("\n" + "Récupération de l'id réussie !");
+                System.out.println("Récupération de l'id réussie !");
             }
 
         } catch (SQLException e) {

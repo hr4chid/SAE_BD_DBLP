@@ -23,7 +23,7 @@ public class PublicationAuthorsDAO {
             preparedStatement.setInt(2, publicationAuthors.getPublicationId());
 
             preparedStatement.executeUpdate();
-            System.out.println("Insertion réussie !" + "\n\n");
+            System.out.println("Publication auteurs insertion réussie !");
 
         } catch (SQLException e) {
             e.printStackTrace();

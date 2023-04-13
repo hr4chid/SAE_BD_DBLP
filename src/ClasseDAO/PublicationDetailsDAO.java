@@ -25,7 +25,7 @@ public class PublicationDetailsDAO {
             preparedStatement.setString(4, publicationDetails.getKey_id());
 
             preparedStatement.executeUpdate();
-            System.out.println("Insertion réussie !" + "\n\n");
+            System.out.println("Publication détails insertion réussie !");
 
         } catch (SQLException e) {
             e.printStackTrace();
