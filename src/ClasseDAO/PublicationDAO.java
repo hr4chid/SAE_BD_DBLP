@@ -17,7 +17,10 @@ public class PublicationDAO {
 
     public void insertPublication(Publication publication) throws SQLException {
         try {
-            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.publications (id, title, year, venue, nauthor, type) VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.publications (id, title, year, venue, nauthor, type) " +
+                    "SELECT ?, ?, ?, ?, ?, ? " +
+                    "WHERE NOT EXISTS " +
+                    "(SELECT * FROM dblp.publications WHERE id = ?)");
 
             preparedStatement.setInt(1, publication.getId());
             preparedStatement.setString(2, publication.getTitle());
@@ -25,12 +28,18 @@ public class PublicationDAO {
             preparedStatement.setString(4, publication.getVenue());
             preparedStatement.setInt(5, publication.getNbAuthors());
             preparedStatement.setString(6, publication.getType());
+            preparedStatement.setInt(7, publication.getId());
 
-            preparedStatement.executeUpdate();
-            System.out.println("Insertion réussie !" + "\n\n");
+            int rowsInserted = preparedStatement.executeUpdate();
 
+            if (rowsInserted > 0) {
+                System.out.println("Publication insérée avec succès.");
+            } else {
+                System.out.println("La publication existe déjà dans la base de données.");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 }

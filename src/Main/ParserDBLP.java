@@ -109,7 +109,8 @@ public class ParserDBLP {
                         publicationData = new Publication(titleData, yearData, venueData, nbAuthorsData, typeData);
                         System.out.println("\n" + publicationData.toString());
                         publicationDAO.insertPublication(publicationData);
-
+                    }
+/*
                         // Traitement publications auteurs des datas
                         PublicationAuthors publicationAuthors = null;
                         for(int u = 0; u < authorDataList.getLength(); u++){
@@ -124,6 +125,7 @@ public class ParserDBLP {
                             publicationAuthorsDAO.insertPublicationAuthors(publicationAuthors);
                         }
 
+
                         // Traitement publications des datas en détails
                         PublicationDetails publicationDetailsData = null;
                         String mdateData = dataNode.getAttribute("mdate");
@@ -131,9 +133,9 @@ public class ParserDBLP {
 
                         publicationDetailsData = new PublicationDetails(publicationData.getId(), nbAuthorsData, mdateData, keyData);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsData);
-                    }
+                    }*/
 
-
+/*
 
                     // Traitement publications des articles
                     NodeList articleList = dblpNode.getElementsByTagName("article");
@@ -536,7 +538,7 @@ public class ParserDBLP {
                         publicationDetailsProceedings = new PublicationDetails(publicationProceedings.getId(), nbAuthorsProceedings, mdateProceedings, keyProceedings);
                         publicationDetailsDAO.insertPublicationDetailsDAO(publicationDetailsProceedings);
                     }
-
+*/
                 }
 
 

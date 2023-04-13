@@ -16,20 +16,30 @@ public class AuteurDAO {
         this.connection = DBconnector.getConnection();
     }
 
-    public void insertAutheur(Auteur autheur) throws SQLException {
-        try {
-            PreparedStatement preparedStatement = this.connection.prepareStatement("INSERT INTO dblp.authors (id, name) VALUES (?, ?)");
+    public boolean authorExists(int id) throws SQLException {
+        String query = "SELECT id FROM dblp.authors WHERE id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        return resultSet.next();
+    }
 
-            preparedStatement.setInt(1, autheur.getId());
-            preparedStatement.setString(2, autheur.getName());
-
+    public void insertAutheur(Auteur author) throws SQLException {
+        if (!authorExists(author.getId())) {
+            String query = "INSERT INTO dblp.authors (id, name, firstpaper, lastpaper, affiliation) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, author.getId());
+            preparedStatement.setString(2, author.getName());
+            preparedStatement.setInt(3, author.getFirstpaper());
+            preparedStatement.setInt(4, author.getLastpaper());
+            preparedStatement.setInt(5, author.getAffiliation());
             preparedStatement.executeUpdate();
-            System.out.println("Insertion réussie !" + "\n\n");
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } else {
+            System.out.println("Auteur avec l'identifiant " + author.getId() + " existe déjà dans la base de données.");
         }
     }
+
+
 
     public Integer getIdAuteur(String nom) throws SQLException {
         PreparedStatement preparedStatement = null;
