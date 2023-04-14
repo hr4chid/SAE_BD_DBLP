@@ -61,5 +61,42 @@ public class AuteurDAO {
     }
 
 
+    public void updateFirstPaperAuthor () throws SQLException {
+        try {
+            PreparedStatement preparedStatement = this.connection.prepareStatement("" +
+                    "UPDATE dblp.authors author " +
+                    "SET firstpaper = " +
+                    "(SELECT MIN(p.year) FROM dblp.publications p INNER JOIN dblp.publicationauthors pauthor " +
+                    "ON pauthor.publication_id = p.id WHERE pauthor.author_id = author.id)");
+
+            preparedStatement.executeUpdate();
+            System.out.println("\n" + "FirstPaper mis à jour");
+
+        } catch (SQLException e){
+                e.printStackTrace();
+        }
+
+    }
+
+    public void updateLastPaperAuthor () throws SQLException {
+        try {
+            PreparedStatement preparedStatement = this.connection.prepareStatement("" +
+                    "UPDATE dblp.authors author " +
+                    "SET lastpaper = " +
+                    "(SELECT MAX(p.year) FROM dblp.publications p INNER JOIN dblp.publicationauthors pauthor " +
+                    "ON pauthor.publication_id = p.id WHERE pauthor.author_id = author.id)");
+
+            preparedStatement.executeUpdate();
+            System.out.println("\n" + "LastPaper mis à jour");
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void updateAuthorAffiliations() throws SQLException {
+        //TODO
+    }
+
 }
 

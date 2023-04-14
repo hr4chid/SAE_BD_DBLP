@@ -538,6 +538,17 @@ public class ParserDBLP {
 
                 // Traitement des CoAuthors
                 coAuthorsDAO.insertCoAuthors();
+
+
+
+                // Update des Papers dans la table Authors
+                autheurDAO.updateFirstPaperAuthor();
+                autheurDAO.updateLastPaperAuthor();
+
+
+                // Update des affiliations dans la table Authors
+                autheurDAO.updateAuthorAffiliations();
+
             }
 
         } catch (SQLException ex) {
