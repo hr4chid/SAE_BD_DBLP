@@ -10,6 +10,290 @@
         <ee>https://doi.org/10.21227/b7mg-yb75</ee>
         <publisher>IEEE DataPort</publisher>
     </data>
+    <data mdate="2023-03-15" key="data/10/You20a">
+        <author>Dongdong You</author>
+        <title>NPE Data for IEEE access 0307.</title>
+        <year>2020</year>
+        <month>March</month>
+        <ee>https://doi.org/10.21227/15qx-7251</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/OuLLHP23">
+        <author>Qiang Ou</author>
+        <author>Longfu Luo</author>
+        <author>Yong Li 0016</author>
+        <author>Rong Han</author>
+        <author>Yanjian Peng</author>
+        <title>An Improved Radial Buckling Analysis Method and Test Investigation for Power Transformer under Short Circuit Impact.</title>
+        <year>2023</year>
+        <month>February</month>
+        <ee>https://doi.org/10.21227/t80s-ha24</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/AloniS22">
+        <author>Sukhada Aloni</author>
+        <author>Divya Shekhawat</author>
+        <title>Mobile Sensor Dataset for Human Activity Classification used in Forensics.</title>
+        <year>2022</year>
+        <month>September</month>
+        <ee>https://doi.org/10.21227/njyt-t438</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-24" key="data/10/Zhang22ae">
+        <author>Junbao Zhang</author>
+        <title>Simulated online banana purchase data.</title>
+        <year>2022</year>
+        <month>May</month>
+        <ee>https://doi.org/10.21227/hp44-8j05</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Geva20">
+        <author>Ran Geva</author>
+        <title>free dataset from news/message boards/blogs about CoronaVirus (4 month of data - 5.2M posts).</title>
+        <year>2020</year>
+        <month>April</month>
+        <ee type="oa">https://doi.org/10.21227/kc4v-q323</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Lee20">
+        <author>Chris Lee</author>
+        <title>signal on detection.</title>
+        <year>2020</year>
+        <month>June</month>
+        <ee type="oa">https://doi.org/10.21227/hhqj-q280</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Makonin21">
+        <author orcid="0000-0002-7818-8301">Stephen Makonin</author>
+        <title>AMPds2: The Almanac of Minutely Power dataset (Version 2).</title>
+        <year>2021</year>
+        <month>November</month>
+        <ee type="oa">https://doi.org/10.21227/c2rq-bx53</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-30" key="data/10/HornbergerPMRFBHGLBK21e">
+        <author orcid="0000-0002-3599-6886">Tobias Hornberger</author>
+        <author orcid="0000-0003-0178-6183">Florian Pfaff</author>
+        <author orcid="0000-0002-2316-3414">Georg Maier</author>
+        <author orcid="0000-0003-4289-6362">Marcel Reith-Braun</author>
+        <author orcid="0000-0001-7206-1898">Merle Flitter</author>
+        <author>Albert Bauer</author>
+        <author orcid="0000-0001-9870-2331">Uwe D. Hanebeck</author>
+        <author orcid="0000-0002-1041-6750">Robin Gruna</author>
+        <author orcid="0000-0001-6698-2332">Thomas L&auml;ngle</author>
+        <author>J&uuml;rgen Beyerer</author>
+        <author>Harald Kruggel-Emden</author>
+        <title>Images of Balls Transported on a Conveyor Belt - Recording 4.</title>
+        <year>2021</year>
+        <month>September</month>
+        <ee type="oa">https://doi.org/10.5281/zenodo.5096551</ee>
+        <publisher>Zenodo</publisher>
+    </data>
+    <data mdate="2023-03-30" key="data/10/HornbergerPMRFBHGLBK21ax">
+        <author orcid="0000-0002-3599-6886">Tobias Hornberger</author>
+        <author orcid="0000-0003-0178-6183">Florian Pfaff</author>
+        <author orcid="0000-0002-2316-3414">Georg Maier</author>
+        <author orcid="0000-0003-4289-6362">Marcel Reith-Braun</author>
+        <author orcid="0000-0001-7206-1898">Merle Flitter</author>
+        <author>Albert Bauer</author>
+        <author orcid="0000-0001-9870-2331">Uwe D. Hanebeck</author>
+        <author orcid="0000-0002-1041-6750">Robin Gruna</author>
+        <author orcid="0000-0001-6698-2332">Thomas L&auml;ngle</author>
+        <author>J&uuml;rgen Beyerer</author>
+        <author>Harald Kruggel-Emden</author>
+        <title>Images of Wheat Grains Transported on a Conveyor Belt - Recording 12.</title>
+        <year>2021</year>
+        <month>September</month>
+        <ee type="oa">https://doi.org/10.5281/zenodo.5091458</ee>
+        <publisher>Zenodo</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/FanUPNFPO20">
+        <author>Yuchuan Fan</author>
+        <author>Aleksejs Udalcovs</author>
+        <author>Xiaodan Pang</author>
+        <author>Carlos Natalino</author>
+        <author>Marija Furdek</author>
+        <author>Sergei Popov</author>
+        <author>Oskars Ozolins</author>
+        <title>2020_JOCN_Constellation_Dataset.</title>
+        <year>2020</year>
+        <month>November</month>
+        <ee>https://doi.org/10.21227/1684-a275</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Li22m">
+        <author orcid="0000-0001-8828-632X">Junjie Li</author>
+        <title>Labeled data of tracking evolution of static warnings.</title>
+        <year>2022</year>
+        <month>March</month>
+        <ee>https://doi.org/10.21227/tbk0-ct46</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Zhao22f">
+        <author>Ruizhe Zhao</author>
+        <title>NSL-KDD.</title>
+        <year>2022</year>
+        <month>February</month>
+        <ee>https://doi.org/10.21227/8rpg-qt98</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Aytac21">
+        <author>Utku Can Ayta&ccedil;</author>
+        <title>Brain Image Clinical Data.</title>
+        <year>2021</year>
+        <month>June</month>
+        <ee>https://doi.org/10.21227/k3tj-w517</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/BertoglioA22">
+        <author>Daniele Bertoglio</author>
+        <author>Jordy Akkermans</author>
+        <title>Demeaned images for SV2A ICA analysis.</title>
+        <year>2022</year>
+        <month>October</month>
+        <ee>https://doi.org/10.21227/8jda-j668</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/WangZ22">
+        <author orcid="0000-0002-1513-7574">Ziwei Wang</author>
+        <author>Xiaolei Zhong</author>
+        <title>Data of enterprise alliances.</title>
+        <year>2022</year>
+        <month>February</month>
+        <ee>https://doi.org/10.21227/s9cp-1e39</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/RamosP21">
+        <author orcid="0000-0002-6482-2025">Gabryel S. Ramos</author>
+        <author orcid="0000-0001-6916-700X">Milena Faria Pinto</author>
+        <title>Shuttle Tanker, FPSO and FSO image dataset for ship recognition.</title>
+        <year>2021</year>
+        <month>September</month>
+        <ee>https://doi.org/10.21227/9xzy-fd09</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-30" key="data/10/EchanizCG20">
+        <author orcid="0000-0001-6800-1518">Oier Echaniz</author>
+        <author orcid="0000-0001-9454-9464">Carlos M. Chiesa-Estomba</author>
+        <author orcid="0000-0001-7373-4097">Manuel Gra&ntilde;a</author>
+        <title>Head-Neck-Radiomics-HN1 data processed with Pyradiomics ready to use for data analysis.</title>
+        <year>2020</year>
+        <month>February</month>
+        <ee type="oa">https://doi.org/10.5281/zenodo.3660998</ee>
+        <publisher>Zenodo</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/GarzaFabreH22">
+        <author orcid="0000-0002-7737-3011">Mario Garza-Fabre</author>
+        <author orcid="0000-0002-4338-1806">Julia Handl</author>
+        <title>Protein Structure and Synthetic Multi-view Clustering Datasets.</title>
+        <year>2022</year>
+        <month>November</month>
+        <ee>https://doi.org/10.21227/sp55-pe68</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/DaiLL22">
+        <author>Zhihui Dai</author>
+        <author>Shanshan Liu</author>
+        <author>Yiran Li</author>
+        <title>Standardized current and voltage of six-terminal ring flexible DC distribution system data.</title>
+        <year>2022</year>
+        <month>December</month>
+        <ee>https://doi.org/10.21227/c9p3-rd16</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Alhammadi21">
+        <author orcid="0000-0002-4280-8716">Ahmed Alhammadi</author>
+        <title>EEG data collection experiment software.</title>
+        <year>2021</year>
+        <month>November</month>
+        <ee>https://doi.org/10.21227/2vna-ms53</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Delamare20">
+        <author>Mickael Delamare</author>
+        <title>0000-0003-0119-2326.</title>
+        <year>2020</year>
+        <month>May</month>
+        <ee type="oa">https://doi.org/10.21227/wpxw-6v26</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Topolanek22">
+        <author orcid="0000-0001-9754-6867">David Topolanek</author>
+        <title>Meshed LV distribution network.</title>
+        <year>2022</year>
+        <month>March</month>
+        <ee>https://doi.org/10.21227/kssw-1457</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/SeoLPPHKKRBS23">
+        <author>Yong-Sin Seo</author>
+        <author>Jae-Young Lee</author>
+        <author>Chanhun Park</author>
+        <author>Jongwoo Park</author>
+        <author>Byung-Kil Han</author>
+        <author>Je-Sung Koh</author>
+        <author>Uikyum Kim</author>
+        <author>Hugo Rodrigue</author>
+        <author>Jeongae Bak</author>
+        <author orcid="0000-0002-8541-9534">Sung-Hyuk Song</author>
+        <title>Supplementary materials and video files.</title>
+        <year>2023</year>
+        <month>February</month>
+        <ee>https://doi.org/10.21227/xps8-wv71</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Siddhartha20">
+        <author orcid="0000-0002-3908-3152">Manu Siddhartha</author>
+        <title>Bondora Peer-to-Peer Lending Data.</title>
+        <year>2020</year>
+        <month>November</month>
+        <ee type="oa">https://doi.org/10.21227/33kz-0s65</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/Suryotrisongko21">
+        <author orcid="0000-0001-7792-6379">Hatma Suryotrisongko</author>
+        <title>Botnet DGA Dataset.</title>
+        <year>2021</year>
+        <month>June</month>
+        <ee type="oa">https://doi.org/10.21227/rg6z-z622</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-24" key="data/10/FontaineS23">
+        <author orcid="0000-0001-5942-9440">Jaron Fontaine</author>
+        <author orcid="0000-0003-1943-6261">Adnan Shahid</author>
+        <title>IQ signals captured from LTE, WiFi, and DVB-T.</title>
+        <year>2023</year>
+        <month>March</month>
+        <ee>https://doi.org/10.21227/5g7m-gf53</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/LionisPTSSNKA22">
+        <author>Antonios Lionis</author>
+        <author orcid="0000-0002-8772-2502">Kostas Peppas 0001</author>
+        <author>Andreas Tsigkopoulos</author>
+        <author>Antonios Sklavounos</author>
+        <author>Argyris Stasinakis</author>
+        <author>Hector E. Nistazakis</author>
+        <author>Keith Kohn</author>
+        <author>Konstantinos Aidinis</author>
+        <title>Experimental Machine Learning Approach for Optical Turbulence and FSO Outage Performance Modeling.</title>
+        <year>2022</year>
+        <month>September</month>
+        <ee>https://doi.org/10.21227/8bqw-gy72</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
+    <data mdate="2023-03-15" key="data/10/BoukthirQADA22">
+        <author orcid="0000-0001-8049-268X">Khalil Boukthir</author>
+        <author>Abdulrahman M. Qahtani</author>
+        <author>Omar Almutiry</author>
+        <author>Habib Dhahri</author>
+        <author orcid="0000-0002-0642-3384">Adel M. Alimi</author>
+        <title>TSVD : Tunisia Street View Dataset.</title>
+        <year>2022</year>
+        <month>January</month>
+        <ee>https://doi.org/10.21227/extw-0k60</ee>
+        <publisher>IEEE DataPort</publisher>
+    </data>
     <article mdate="2017-05-20" key="journals/tkde/SiaCC07">
         <author>Ka Cheung Sia</author>
         <author>Junghoo Cho</author>
@@ -24,6 +308,311 @@
         <ee>http://doi.ieeecomputersociety.org/10.1109/TKDE.2007.1041</ee>
         <url>db/journals/tkde/tkde19.html#SiaCC07</url>
     </article>
+    <article mdate="2020-09-06" key="journals/twc/SevillanoVLLIF07">
+        <author orcid="0000-0001-8097-8436">Juan F. Sevillano</author>
+        <author>Igone V&eacute;lez</author>
+        <author>Martin Leyh</author>
+        <author>Stefan Lipp</author>
+        <author>Andoni Irizar</author>
+        <author>Luis Fontan</author>
+        <title>In-Service SNR Estimation without Symbol Timing Recovery for QPSK Data Transmission Systems.</title>
+        <pages>3202-3207</pages>
+        <year>2007</year>
+        <volume>6</volume>
+        <journal>IEEE Trans. Wirel. Commun.</journal>
+        <number>9</number>
+        <ee>https://doi.org/10.1109/TWC.2007.06030071</ee>
+        <url>db/journals/twc/twc6.html#SevillanoVLLIF07</url>
+    </article><article mdate="2020-09-06" key="journals/twc/MatamorosA11">
+    <author orcid="0000-0002-4344-8409">Javier Matamoros</author>
+    <author>Carles Ant&oacute;n-Haro</author>
+    <title>Optimal Network Size and Encoding Rate for Wireless Sensor Network-Based Decentralized Estimation under Power and Bandwidth Constraints.</title>
+    <pages>1121-1131</pages>
+    <year>2011</year>
+    <volume>10</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1109/TWC.2011.012411.091737</ee>
+    <url>db/journals/twc/twc10.html#MatamorosA11</url>
+</article><article mdate="2020-09-06" key="journals/twc/ZhangYL10">
+    <author>Shiying Zhang</author>
+    <author orcid="0000-0003-1006-7594">F. Richard Yu</author>
+    <author orcid="0000-0003-3529-2640">Victor C. M. Leung</author>
+    <title>Joint connection admission control and routing in IEEE 802.16-based mesh networks.</title>
+    <pages>1370-1379</pages>
+    <year>2010</year>
+    <volume>9</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1109/TWC.2010.04.081437</ee>
+    <url>db/journals/twc/twc9.html#ZhangYL10</url>
+</article><article mdate="2022-09-22" key="journals/twc/AlamJ22">
+    <author orcid="0000-0001-9760-7770">Md. Zahangir Alam</author>
+    <author orcid="0000-0002-1807-7220">Abbas Jamalipour</author>
+    <title>Multi-Agent DRL-Based Hungarian Algorithm (MADRLHA) for Task Offloading in Multi-Access Edge Computing Internet of Vehicles (IoVs).</title>
+    <pages>7641-7652</pages>
+    <year>2022</year>
+    <volume>21</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>9</number>
+    <ee>https://doi.org/10.1109/TWC.2022.3160099</ee>
+    <url>db/journals/twc/twc21.html#AlamJ22</url>
+</article><article mdate="2023-01-13" key="journals/twc/FrancisMA16">
+    <author>Jobin Francis 0001</author>
+    <author orcid="0000-0002-3614-049X">Neelesh B. Mehta</author>
+    <author>S. N. Ananya</author>
+    <title>Best-M Feedback in OFDM: Base-Station-Side Estimation and System Implications.</title>
+    <pages>3616-3627</pages>
+    <year>2016</year>
+    <volume>15</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>5</number>
+    <ee>https://doi.org/10.1109/TWC.2016.2523990</ee>
+    <url>db/journals/twc/twc15.html#FrancisMA16</url>
+</article><article mdate="2020-09-06" key="journals/twc/TaccaMF07">
+    <author>Marco Tacca</author>
+    <author orcid="0000-0002-5636-9910">Paolo Monti 0001</author>
+    <author>Andrea Fumagalli</author>
+    <title>Cooperative and Reliable ARQ Protocols for Energy Harvesting Wireless Sensor Nodes.</title>
+    <pages>2519-2529</pages>
+    <year>2007</year>
+    <volume>6</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>7</number>
+    <ee>https://doi.org/10.1109/TWC.2007.05878</ee>
+    <url>db/journals/twc/twc6.html#TaccaMF07</url>
+</article><article mdate="2022-06-23" key="journals/twc/AmarasuriyaLP16">
+    <author>Gayan Amarasuriya</author>
+    <author>Erik G. Larsson</author>
+    <author orcid="0000-0002-2062-131X">H. Vincent Poor</author>
+    <title>Wireless Information and Power Transfer in Multiway Massive MIMO Relay Networks.</title>
+    <pages>3837-3855</pages>
+    <year>2016</year>
+    <volume>15</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1109/TWC.2016.2530067</ee>
+    <url>db/journals/twc/twc15.html#AmarasuriyaLP16</url>
+</article><article mdate="2020-09-06" key="journals/twc/JeganathanGSC09">
+    <author>Jeyadeepan Jeganathan</author>
+    <author>Ali Ghrayeb</author>
+    <author>Leszek Szczecinski</author>
+    <author>Andres Ceron</author>
+    <title>Space shift keying modulation for MIMO channels.</title>
+    <pages>3692-3703</pages>
+    <year>2009</year>
+    <volume>8</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>7</number>
+    <ee>https://doi.org/10.1109/TWC.2009.080910</ee>
+    <url>db/journals/twc/twc8.html#JeganathanGSC09</url>
+</article><article mdate="2021-10-14" key="journals/twc/ShenYWW17">
+    <author orcid="0000-0003-2736-3306">Lei Shen</author>
+    <author orcid="0000-0003-3868-0593">Yu-Dong Yao</author>
+    <author>Haiquan Wang</author>
+    <author orcid="0000-0002-3273-6309">Huaxia Wang</author>
+    <title>ICA Based Semi-Blind Decoding Method for a Multicell Multiuser Massive MIMO Uplink System in Rician/Rayleigh Fading Channels.</title>
+    <pages>7501-7511</pages>
+    <year>2017</year>
+    <volume>16</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>11</number>
+    <ee>https://doi.org/10.1109/TWC.2017.2749306</ee>
+    <url>db/journals/twc/twc16.html#ShenYWW17</url>
+</article><article mdate="2022-10-02" key="journals/twc/XuCH08">
+    <author>Lei Xu 0005</author>
+    <author orcid="0000-0001-6882-600X">Sheng Chen 0001</author>
+    <author orcid="0000-0002-2636-5214">Lajos Hanzo</author>
+    <title>EXIT Chart Analysis Aided Turbo MUD Designs for the Rank-Deficient Multiple Antenna Assisted OFDM Uplink.</title>
+    <pages>2039-2044</pages>
+    <year>2008</year>
+    <volume>7</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1109/TWC.2008.070071</ee>
+    <ee>https://www.wikidata.org/entity/Q62131921</ee>
+    <url>db/journals/twc/twc7.html#XuCH08</url>
+</article><article mdate="2020-09-06" key="journals/twc/Coluccia13">
+    <author orcid="0000-0001-7118-9734">Angelo Coluccia</author>
+    <title>Reduced-Bias ML-Based Estimators with Low Complexity for Self-Calibrating RSS Ranging.</title>
+    <pages>1220-1230</pages>
+    <year>2013</year>
+    <volume>12</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1109/TWC.2013.011713.120557</ee>
+    <url>db/journals/twc/twc12.html#Coluccia13</url>
+</article><article mdate="2021-02-24" key="journals/twc/JiangDNKQ18">
+    <author orcid="0000-0002-5337-890X">Nan Jiang 0004</author>
+    <author orcid="0000-0003-1001-7036">Yansha Deng</author>
+    <author orcid="0000-0001-8337-5884">Arumugam Nallanathan</author>
+    <author orcid="0000-0001-6114-0849">Xin Kang 0001</author>
+    <author orcid="0000-0002-4037-3149">Tony Q. S. Quek</author>
+    <title>Analyzing Random Access Collisions in Massive IoT Networks.</title>
+    <pages>6853-6870</pages>
+    <year>2018</year>
+    <volume>17</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>10</number>
+    <ee type="oa">https://doi.org/10.1109/TWC.2018.2864756</ee>
+    <url>db/journals/twc/twc17.html#JiangDNKQ18</url>
+</article><article mdate="2020-09-06" key="journals/twc/BlaszczyszynJK14">
+    <author>Bartlomiej Blaszczyszyn</author>
+    <author>Miodrag Jovanovic</author>
+    <author>Mohamed Kadhem Karray</author>
+    <title>Quality of Real-Time Streaming in Wireless Cellular Networks - Stochastic Modeling and Analysis.</title>
+    <pages>3124-3136</pages>
+    <year>2014</year>
+    <volume>13</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1109/TWC.2014.042414.131371</ee>
+    <url>db/journals/twc/twc13.html#BlaszczyszynJK14</url>
+</article><article mdate="2020-09-06" key="journals/twc/MaSL17">
+    <author>Jinghuan Ma</author>
+    <author orcid="0000-0001-8644-8241">Lingyang Song</author>
+    <author orcid="0000-0001-7702-1123">Yonghui Li 0001</author>
+    <title>Cost Efficiency for Economical Mobile Data Traffic Management From Users' Perspective.</title>
+    <pages>362-375</pages>
+    <year>2017</year>
+    <volume>16</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1109/TWC.2016.2623615</ee>
+    <url>db/journals/twc/twc16.html#MaSL17</url>
+</article><article mdate="2021-12-15" key="journals/twc/ZhangHZ21">
+    <author orcid="0000-0001-5643-8237">Hongyang Zhang</author>
+    <author orcid="0000-0001-6869-5732">Xiaojing Huang 0001</author>
+    <author orcid="0000-0002-6102-3762">J. Andrew Zhang</author>
+    <title>Adaptive Transmission With Frequency-Domain Precoding and Linear Equalization Over Fast Fading Channels.</title>
+    <pages>7420-7430</pages>
+    <year>2021</year>
+    <volume>20</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>11</number>
+    <ee>https://doi.org/10.1109/TWC.2021.3083652</ee>
+    <url>db/journals/twc/twc20.html#ZhangHZ21</url>
+</article><article mdate="2020-09-06" key="journals/twc/ChetlurD20">
+    <author orcid="0000-0001-6526-5833">Vishnu Vardhan Chetlur</author>
+    <author orcid="0000-0003-2829-9449">Harpreet S. Dhillon</author>
+    <title>Coverage and Rate Analysis of Downlink Cellular Vehicle-to-Everything (C-V2X) Communication.</title>
+    <pages>1738-1753</pages>
+    <year>2020</year>
+    <volume>19</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1109/TWC.2019.2957222</ee>
+    <url>db/journals/twc/twc19.html#ChetlurD20</url>
+</article><article mdate="2020-09-06" key="journals/twc/BlancoN16">
+    <author>Luis Blanco</author>
+    <author>Montse N&aacute;jar</author>
+    <title>Sparse Multiple Relay Selection for Network Beamforming With Individual Power Constraints Using Semidefinite Relaxation.</title>
+    <pages>1206-1217</pages>
+    <year>2016</year>
+    <volume>15</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1109/TWC.2015.2487439</ee>
+    <url>db/journals/twc/twc15.html#BlancoN16</url>
+</article><article mdate="2020-09-06" key="journals/twc/HoangL08">
+    <author>Anh Tuan Hoang</author>
+    <author orcid="0000-0003-2671-5090">Ying-Chang Liang</author>
+    <title>Downlink Channel Assignment and Power Control for Cognitive Radio Networks.</title>
+    <pages>3106-3117</pages>
+    <year>2008</year>
+    <volume>7</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>8</number>
+    <ee>https://doi.org/10.1109/TWC.2008.070022</ee>
+    <url>db/journals/twc/twc7.html#HoangL08</url>
+</article><article mdate="2023-03-22" key="journals/twc/ZhangXC08">
+    <author>Yan Zhang 0002</author>
+    <author orcid="0000-0001-8549-6794">Yang Xiao 0001</author>
+    <author>Hsiao-Hwa Chen</author>
+    <title>Queueing analysis for OFDM subcarrier allocation in broadband wireless multiservice networks.</title>
+    <pages>3951-3961</pages>
+    <year>2008</year>
+    <volume>7</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>10</number>
+    <ee>https://doi.org/10.1109/T-WC.2008.070495</ee>
+    <url>db/journals/twc/twc7.html#ZhangXC08</url>
+</article><article mdate="2020-09-06" key="journals/twc/SergiV10">
+    <author>Simone Sergi</author>
+    <author orcid="0000-0003-0543-1523">Giorgio Matteo Vitetta</author>
+    <title>A Game Theoretical Approach to Distributed Relay Selection in Randomized Cooperation.</title>
+    <pages>2611-2621</pages>
+    <year>2010</year>
+    <volume>9</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>8</number>
+    <ee>https://doi.org/10.1109/TWC.2010.061810.091394</ee>
+    <url>db/journals/twc/twc9.html#SergiV10</url>
+</article><article mdate="2020-09-06" key="journals/twc/XieR05">
+    <author>Shoulie Xie</author>
+    <author>Susanto Rahardja</author>
+    <title>Performance evaluation for quaternary DS-SSMA communications with complex signature sequences over Rayleigh-fading channels.</title>
+    <pages>266-277</pages>
+    <year>2005</year>
+    <volume>4</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1109/TWC.2004.840203</ee>
+    <url>db/journals/twc/twc4.html#XieR05</url>
+</article><article mdate="2022-04-01" key="journals/twc/KhaliliMZJYJ22">
+    <author orcid="0000-0002-3845-1144">Ata Khalili</author>
+    <author>Ehsan Mohammadi Monfared</author>
+    <author orcid="0000-0003-1660-4733">Shayan Zargari</author>
+    <author orcid="0000-0001-9364-315X">Mohammad Reza Javan</author>
+    <author orcid="0000-0001-5364-8888">Nader Mokari Yamchi</author>
+    <author orcid="0000-0001-7893-8435">Eduard Axel Jorswieck</author>
+    <title>Resource Management for Transmit Power Minimization in UAV-Assisted RIS HetNets Supported by Dual Connectivity.</title>
+    <pages>1806-1822</pages>
+    <year>2022</year>
+    <volume>21</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1109/TWC.2021.3107306</ee>
+    <url>db/journals/twc/twc21.html#KhaliliMZJYJ22</url>
+</article><article mdate="2022-06-23" key="journals/twc/EvinaHHMT22">
+    <author>Romaric Mvone Evina</author>
+    <author>Chaouki Hannachi</author>
+    <author>Djilali Hammou</author>
+    <author>Emilia Moldovan</author>
+    <author orcid="0000-0002-8649-5782">Serioja Ovidiu Tatu</author>
+    <title>Optimization of 16-QAM and 32-QAM Constellations for Mitigating Impairments of Phase Noise in Millimeter-Wave Receivers.</title>
+    <pages>3605-3616</pages>
+    <year>2022</year>
+    <volume>21</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1109/TWC.2021.3122943</ee>
+    <url>db/journals/twc/twc21.html#EvinaHHMT22</url>
+</article><article mdate="2020-09-06" key="journals/twc/LiuT17">
+    <author orcid="0000-0001-8822-9966">Chun-Hung Liu</author>
+    <author>Hong-Cheng Tsai</author>
+    <title>On the Limits of Coexisting Coverage and Capacity in Multi-RAT Heterogeneous Networks.</title>
+    <pages>3086-3101</pages>
+    <year>2017</year>
+    <volume>16</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>5</number>
+    <ee>https://doi.org/10.1109/TWC.2017.2675399</ee>
+    <url>db/journals/twc/twc16.html#LiuT17</url>
+</article><article mdate="2020-09-06" key="journals/twc/KocJVT14">
+    <author>Ali Taha Ko&ccedil;</author>
+    <author>Satish Chandra Jha</author>
+    <author>Rath Vannithamby</author>
+    <author>Murat Torlak</author>
+    <title>Device Power Saving and Latency Optimization in LTE-A Networks Through DRX Configuration.</title>
+    <pages>2614-2625</pages>
+    <year>2014</year>
+    <volume>13</volume>
+    <journal>IEEE Trans. Wirel. Commun.</journal>
+    <number>5</number>
+    <ee>https://doi.org/10.1109/TWC.2014.031914.131298</ee>
+    <url>db/journals/twc/twc13.html#KocJVT14</url>
+</article>
     <phdthesis mdate="2002-01-03" key="phd/Olken93">
         <author>Frank Olken</author>
         <title>Random Sampling from Databases</title>
@@ -78,6 +667,86 @@
         <ee>http://www.klaus-tschira-stiftung.de/</ee>
         <year>2012</year>
     </www>
+    <www mdate="2022-05-06" key="homepages/215/4978">
+        <author>Tess E. Smidt</author>
+        <title>Home Page</title>
+        <note type="affiliation">Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, Cambridge, MA, USA</note>
+        <note type="affiliation">Lawrence Berkeley National Laboratory, Berkeley, CA, USA</note>
+        <note label="PhD 2018" type="affiliation">University of California, Berkeley, CA, USA</note>
+        <url>https://blondegeek.github.io/</url>
+        <url>https://www.eecs.mit.edu/people/tess-smidt/</url>
+        <url>https://scholar.google.com/citations?user=iF01q24AAAAJ</url>
+        <url>https://www.linkedin.com/in/tesssmidt</url>
+        <url>https://twitter.com/tesssmidt</url>
+        <url>https://github.com/blondegeek</url>
+    </www><www mdate="2018-03-01" key="homepages/215/3452">
+    <author>Olivia Cheng</author>
+    <title>Home Page</title>
+</www>
+    <www mdate="2018-03-09" key="homepages/215/9998">
+        <author>Raffaela de C. Cunha</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-06" key="homepages/215/7477">
+        <author>Kyle Lassak</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-07" key="homepages/215/8382">
+        <author>Luca Paciello</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-02" key="homepages/215/5565">
+        <author>Max Kochurov</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-02-28" key="homepages/215/3176">
+        <author>Liviu Dorobantu</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-09" key="homepages/215/9797">
+        <author>Saad Ali Alahmari</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-06" key="homepages/215/6932">
+        <author>Srikanth Budnar</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-07" key="homepages/215/7932">
+        <author>Valerie Gervais</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-02" key="homepages/215/5759">
+        <author>Rezvan Almas Shehni</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-02-28" key="homepages/215/2552">
+        <author>Alex D. Bird</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-02-28" key="homepages/215/2829">
+        <author>Fumiharu Nakahara</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-02-26" key="homepages/215/0855">
+        <author>D. Cinarelli</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-06" key="homepages/215/6789">
+        <author>Luke Mawst</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-07" key="homepages/215/8726">
+        <author>P. Purohit</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2018-03-06" key="homepages/215/6568">
+        <author>Fong Jia Kang</author>
+        <title>Home Page</title>
+    </www>
+    <www mdate="2021-06-16" key="homepages/215/9502">
+        <author>Henrik M&auml;ntynen</author>
+        <title>Home Page</title>
+    </www>
     <inproceedings mdate="2017-05-25" key="conf/coopis/AbdellatifCL04">
         <author>Takoua Abdellatif</author>
         <author>Emmanuel Cecchet</author>
@@ -90,6 +759,328 @@
         <booktitle>CoopIS/DOA/ODBASE (2)</booktitle>
         <url>db/conf/coopis/coopis2004-2.html#AbdellatifCL04</url>
     </inproceedings>
+    <inproceedings mdate="2002-11-26" key="conf/icpp/DattaK90">
+        <author>Amitava Datta</author>
+        <author>Kamala Krithivasan</author>
+        <title>Efficient Algorithms for the Maximum Empty Rectangle Problem in Shared Memory and Other Architectures.</title>
+        <pages>344-345</pages>
+        <year>1990</year>
+        <crossref>conf/icpp/1990-3</crossref>
+        <booktitle>ICPP (3)</booktitle>
+        <url>db/conf/icpp/icpp1990-3.html#DattaK90</url>
+    </inproceedings>
+    <inproceedings mdate="2023-03-24" key="conf/icpp/YangW97">
+        <author>Yuanyuan Yang 0001</author>
+        <author>Jianchao Wang</author>
+        <title>Performance Analysis and Simulation of Multicast Networks.</title>
+        <pages>385-389</pages>
+        <year>1997</year>
+        <crossref>conf/icpp/1997</crossref>
+        <booktitle>ICPP</booktitle>
+        <ee>https://doi.org/10.1109/ICPP.1997.622670</ee>
+        <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1997.622670</ee>
+        <url>db/conf/icpp/icpp1997.html#YangW97</url>
+    </inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/YangCS13">
+    <author>Shih-Rong Yang</author>
+    <author>Guaning Chen</author>
+    <author>Min-Te Sun</author>
+    <title>Dynamic Content Adjustment in Mobile Ad Hoc Networks.</title>
+    <pages>943-949</pages>
+    <year>2013</year>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.2013.112</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2013.112</ee>
+    <crossref>conf/icpp/2013</crossref>
+    <url>db/conf/icpp/icpp2013.html#YangCS13</url>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/KardasKP13">
+    <author>Marcin Kardas</author>
+    <author>Marek Klonowski</author>
+    <author orcid="0000-0001-6349-6523">Dominik Pajak</author>
+    <title>Energy-Efficient Leader Election Protocols for Single-Hop Radio Networks.</title>
+    <pages>399-408</pages>
+    <year>2013</year>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.2013.49</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2013.49</ee>
+    <crossref>conf/icpp/2013</crossref>
+    <url>db/conf/icpp/icpp2013.html#KardasKP13</url>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/ZhuCN07">
+    <author>Yanmin Zhu</author>
+    <author>Quanbin Chen</author>
+    <author>Lionel M. Ni</author>
+    <title>On Providing Guaranteed Detectability for Surveillance Applications.</title>
+    <pages>70</pages>
+    <year>2007</year>
+    <crossref>conf/icpp/2007</crossref>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.2007.62</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2007.62</ee>
+    <url>db/conf/icpp/icpp2007.html#ZhuCN07</url>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/Wasi-ur-RahmanLIP14">
+    <author>Md. Wasi-ur-Rahman</author>
+    <author>Xiaoyi Lu</author>
+    <author>Nusrat Sharmin Islam</author>
+    <author>Dhabaleswar K. Panda 0001</author>
+    <title>Performance Modeling for RDMA-Enhanced Hadoop MapReduce.</title>
+    <pages>50-59</pages>
+    <year>2014</year>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.2014.14</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2014.14</ee>
+    <crossref>conf/icpp/2014</crossref>
+    <url>db/conf/icpp/icpp2014.html#Wasi-ur-RahmanLIP14</url>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/BhuyanNA94">
+    <author>Laxmi N. Bhuyan</author>
+    <author>Ashwini K. Nanda</author>
+    <author>Tahsin Askar</author>
+    <title>Performance and Reliability of the Multistage Bus Network.</title>
+    <pages>26-33</pages>
+    <year>1994</year>
+    <crossref>conf/icpp/1994-1</crossref>
+    <booktitle>ICPP (1)</booktitle>
+    <url>db/conf/icpp/icpp1994-1.html#BhuyanNA94</url>
+    <ee>https://doi.org/10.1109/ICPP.1994.158</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1994.158</ee>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/BenoitRR11">
+    <author orcid="0000-0003-2910-3540">Anne Benoit</author>
+    <author>Paul Renaud-Goud</author>
+    <author>Yves Robert</author>
+    <title>On the Performance of Greedy Algorithms for Power Consumption Minimization.</title>
+    <pages>454-463</pages>
+    <year>2011</year>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.2011.11</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2011.11</ee>
+    <crossref>conf/icpp/2011</crossref>
+    <url>db/conf/icpp/icpp2011.html#BenoitRR11</url>
+</inproceedings><proceedings mdate="2014-07-28" key="conf/icpp/1986">
+    <title>International Conference on Parallel Processing, ICPP'86, University Park, PA, USA, August 1986.</title>
+    <booktitle>ICPP</booktitle>
+    <publisher>IEEE Computer Society Press</publisher>
+    <year>1986</year>
+    <url>db/conf/icpp/icpp1986.html</url>
+</proceedings>
+
+    <inproceedings mdate="2023-03-24" key="conf/icpp/RoySA16">
+        <author>Indranil Roy</author>
+        <author>Ankit Srivastava</author>
+        <author>Srinivas Aluru</author>
+        <title>Programming Techniques for the Automata Processor.</title>
+        <pages>205-210</pages>
+        <year>2016</year>
+        <booktitle>ICPP</booktitle>
+        <ee>https://doi.org/10.1109/ICPP.2016.30</ee>
+        <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2016.30</ee>
+        <crossref>conf/icpp/2016</crossref>
+        <url>db/conf/icpp/icpp2016.html#RoySA16</url>
+    </inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/QiaoN96">
+    <author>Wenjian Qiao</author>
+    <author>Lionel M. Ni</author>
+    <title>Adaptive Routing in Irregular Networks Using Cut-Through Switches.</title>
+    <pages>52-60</pages>
+    <year>1996</year>
+    <crossref>conf/icpp/1996-1</crossref>
+    <booktitle>ICPP, Vol. 1</booktitle>
+    <url>db/conf/icpp/icpp96-1.html#QiaoN96</url>
+    <ee>https://doi.org/10.1109/ICPP.1996.537143</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1996.537143</ee>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/LiszkaB93">
+    <author>Kathy J. Liszka</author>
+    <author>Kenneth E. Batcher</author>
+    <title>A Generalized Bitonic Sorting Network.</title>
+    <pages>105-108</pages>
+    <year>1993</year>
+    <crossref>conf/icpp/1993-1</crossref>
+    <booktitle>ICPP (1)</booktitle>
+    <url>db/conf/icpp/icpp1993-1.html#LiszkaB93</url>
+    <ee>https://doi.org/10.1109/ICPP.1993.23</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1993.23</ee>
+</inproceedings><inproceedings mdate="2018-11-21" key="conf/icpp/RamaswamyKNLS18">
+    <author>Ajay Ramaswamy</author>
+    <author>Nalini Kumar</author>
+    <author>Aravind Neelakantan</author>
+    <author>Herman Lam</author>
+    <author>Greg Stitt</author>
+    <title>Scalable Behavioral Emulation of Extreme-Scale Systems Using Structural Simulation Toolkit.</title>
+    <pages>17:1-17:11</pages>
+    <year>2018</year>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1145/3225058.3225124</ee>
+    <crossref>conf/icpp/2018</crossref>
+    <url>db/conf/icpp/icpp2018.html#RamaswamyKNLS18</url>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/LopezMD98">
+    <author>Pedro L&oacute;pez 0001</author>
+    <author>Juan-Miguel Mart&iacute;nez 0001</author>
+    <author orcid="0000-0002-7785-0607">Jos&eacute; Duato</author>
+    <title>DRIL: Dynamically Reduced Message Injection Limitation Mechanism for Wormhole Networks.</title>
+    <pages>535-542</pages>
+    <year>1998</year>
+    <crossref>conf/icpp/1998</crossref>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.1998.708527</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1998.708527</ee>
+    <url>db/conf/icpp/icpp1998.html#LopezMD98</url>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/SalinasL93">
+    <author>Jos&eacute; Salinas</author>
+    <author>Fabrizio Lombardi</author>
+    <title>Emulating Reconfigurable Arrays for Image Processing Using the MasPar Architecture.</title>
+    <pages>141-148</pages>
+    <year>1993</year>
+    <crossref>conf/icpp/1993-3</crossref>
+    <booktitle>ICPP (3)</booktitle>
+    <url>db/conf/icpp/icpp1993-3.html#SalinasL93</url>
+    <ee>https://doi.org/10.1109/ICPP.1993.79</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1993.79</ee>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/HasteerB96">
+    <author>Gagan Hasteer</author>
+    <author>Prithviraj Banerjee</author>
+    <title>A Parallel Algorithm for State Assignment of Finite State Machines.</title>
+    <pages>37-45</pages>
+    <year>1996</year>
+    <crossref>conf/icpp/1996-2</crossref>
+    <booktitle>ICPP, Vol. 2</booktitle>
+    <url>db/conf/icpp/icpp96-2.html#HasteerB96</url>
+    <ee>https://doi.org/10.1109/ICPP.1996.537379</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1996.537379</ee>
+</inproceedings><inproceedings mdate="2014-07-25" key="conf/icpp/BhuyanSC95">
+    <author>Laxmi N. Bhuyan</author>
+    <author>Sumon Shahed</author>
+    <author>Yeimkuan Chang</author>
+    <title>Partitioning an Arbitrary Multicomputer Architecture.</title>
+    <pages>215-219</pages>
+    <year>1995</year>
+    <crossref>conf/icpp/1995-3</crossref>
+    <booktitle>ICPP (3)</booktitle>
+    <url>db/conf/icpp/icpp1995-3.html#BhuyanSC95</url>
+</inproceedings>
+    <inproceedings mdate="2021-10-07" key="conf/icpp/PerotinSR21">
+        <author>Lucas Perotin</author>
+        <author>Hongyang Sun</author>
+        <author>Padma Raghavan</author>
+        <title>Multi-Resource List Scheduling of Moldable Parallel Jobs under Precedence Constraints.</title>
+        <pages>23:1-23:10</pages>
+        <year>2021</year>
+        <booktitle>ICPP</booktitle>
+        <ee>https://doi.org/10.1145/3472456.3472487</ee>
+        <crossref>conf/icpp/2021</crossref>
+        <url>db/conf/icpp/icpp2021.html#PerotinSR21</url>
+    </inproceedings>
+    <inproceedings mdate="2023-03-24" key="conf/icpp/OhringD93">
+        <author>Sabine R. &Ouml;hring</author>
+        <author>Sajal K. Das 0001</author>
+        <title>The Folded Petersen Network: A New Communication-Efficient Multiprocessor Topology.</title>
+        <pages>311-314</pages>
+        <year>1993</year>
+        <crossref>conf/icpp/1993-1</crossref>
+        <booktitle>ICPP (1)</booktitle>
+        <url>db/conf/icpp/icpp1993-1.html#OhringD93</url>
+        <ee>https://doi.org/10.1109/ICPP.1993.175</ee>
+        <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1993.175</ee>
+    </inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/LinL93">
+    <author>Yen-Chun Lin</author>
+    <author>Horng-Yi Lai</author>
+    <title>Generation of Long Sorted Runs on a Unidirectional Array.</title>
+    <pages>184-191</pages>
+    <year>1993</year>
+    <crossref>conf/icpp/1993-3</crossref>
+    <booktitle>ICPP (3)</booktitle>
+    <url>db/conf/icpp/icpp1993-3.html#LinL93</url>
+    <ee>https://doi.org/10.1109/ICPP.1993.96</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1993.96</ee>
+</inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/IrvinM96">
+    <author>R. Bruce Irvin</author>
+    <author>Barton P. Miller</author>
+    <title>Mechanisms for Mapping High-Level Parallel Performance Data.</title>
+    <pages>10-19</pages>
+    <year>1996</year>
+    <crossref>conf/icpp/1996-w</crossref>
+    <booktitle>ICPP Workshop</booktitle>
+    <url>db/conf/icpp/icpp96-w.html#IrvinM96</url>
+    <ee>https://doi.org/10.1109/ICPPW.1996.538586</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPPW.1996.538586</ee>
+</inproceedings><inproceedings mdate="2021-12-06" key="conf/icpp/BarrosoD91">
+    <author>Luiz Andr&eacute; Barroso</author>
+    <author>Michel Dubois 0001</author>
+    <title>Cache Coherence on a Slotted Ring.</title>
+    <pages>230-237</pages>
+    <year>1991</year>
+    <crossref>conf/icpp/1991-1</crossref>
+    <booktitle>ICPP (1)</booktitle>
+    <url>db/conf/icpp/icpp1991-1.html#BarrosoD91</url>
+</inproceedings><inproceedings mdate="2014-07-28" key="conf/icpp/LivnyM87">
+    <author>Miron Livny</author>
+    <author>Udi Manber</author>
+    <title>Active Channels and Their Applications to Parallel Computing.</title>
+    <pages>367-369</pages>
+    <year>1987</year>
+    <crossref>conf/icpp/1987</crossref>
+    <booktitle>ICPP</booktitle>
+    <url>db/conf/icpp/icpp1987.html#LivnyM87</url>
+</inproceedings>
+    <inproceedings mdate="2023-03-24" key="conf/icpp/Sohn94">
+        <author>Andrew Sohn</author>
+        <title>Parallel Speculative Computation of Simulated Annealing.</title>
+        <pages>8-11</pages>
+        <year>1994</year>
+        <crossref>conf/icpp/1994-3</crossref>
+        <booktitle>ICPP (3)</booktitle>
+        <url>db/conf/icpp/icpp1994-3.html#Sohn94</url>
+        <ee>https://doi.org/10.1109/ICPP.1994.154</ee>
+        <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.1994.154</ee>
+    </inproceedings><inproceedings mdate="2017-12-29" key="conf/icpp/NarayanaswamiF92">
+    <author>Chandrasekhar Narayanaswami 0001</author>
+    <author>Wm. Randolph Franklin</author>
+    <title>Boolean Combinations of Polygons in Parallel.</title>
+    <pages>131-135</pages>
+    <year>1992</year>
+    <crossref>conf/icpp/1992-3</crossref>
+    <booktitle>ICPP (3)</booktitle>
+    <url>db/conf/icpp/icpp1992-3.html#NarayanaswamiF92</url>
+</inproceedings><inproceedings mdate="2014-07-28" key="conf/icpp/Lubachevsky89">
+    <author>Boris D. Lubachevsky</author>
+    <title>Synchronization Barrier and Related Tools for Shared Memory Parallel Programming.</title>
+    <pages>175-179</pages>
+    <year>1989</year>
+    <crossref>conf/icpp/1989-2</crossref>
+    <booktitle>ICPP (2)</booktitle>
+    <url>db/conf/icpp/icpp1989-2.html#Lubachevsky89</url>
+</inproceedings>
+    <inproceedings mdate="2014-07-28" key="conf/icpp/DasB85a">
+        <author>Chita R. Das</author>
+        <author>Laxmi N. Bhuyan</author>
+        <title>Computation Availability of Multiple-Bus Multiprocessors.</title>
+        <pages>807-813</pages>
+        <year>1985</year>
+        <crossref>conf/icpp/1985</crossref>
+        <booktitle>ICPP</booktitle>
+        <url>db/conf/icpp/icpp1985.html#DasB85a</url>
+    </inproceedings>
+    <inproceedings mdate="2023-03-24" key="conf/icpp/ArumugamGRTZ13">
+        <author orcid="0000-0002-6482-6237">Kamesh Arumugam</author>
+        <author>Alexander N. Godunov</author>
+        <author>Desh Ranjan</author>
+        <author orcid="0000-0002-9646-8155">Balsa Terzic</author>
+        <author>Mohammad Zubair</author>
+        <title>An Efficient Deterministic Parallel Algorithm for Adaptive Multidimensional Numerical Integration on GPUs.</title>
+        <pages>486-491</pages>
+        <year>2013</year>
+        <booktitle>ICPP</booktitle>
+        <ee>https://doi.org/10.1109/ICPP.2013.59</ee>
+        <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2013.59</ee>
+        <crossref>conf/icpp/2013</crossref>
+        <url>db/conf/icpp/icpp2013.html#ArumugamGRTZ13</url>
+    </inproceedings><inproceedings mdate="2023-03-24" key="conf/icpp/FrascaR12">
+    <author>Michael R. Frasca</author>
+    <author>Padma Raghavan</author>
+    <title>Phase Partitioning Methods for I/O Cache Optimization.</title>
+    <pages>360-368</pages>
+    <year>2012</year>
+    <booktitle>ICPP</booktitle>
+    <ee>https://doi.org/10.1109/ICPP.2012.50</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/ICPP.2012.50</ee>
+    <crossref>conf/icpp/2012</crossref>
+    <url>db/conf/icpp/icpp2012.html#FrascaR12</url>
+</inproceedings>
     <mastersthesis mdate="2022-01-07" key="phd/basesearch/MohamedElmalaki14">
         <author>Salma Hosni Emam Mohamed Elmalaki</author>
         <title>Context-Aware Runtime Engine For Android Operating System.</title>
@@ -111,16 +1102,4 @@
         <ee>https://doi.org/10.1007/978-3-319-20883-1</ee>
         <url>db/reference/genetic/genetic2015.html</url>
     </proceedings>
-    <data mdate="2023-03-15" key="data/10/OuLLHP23">
-        <author>Qiang Ou</author>
-        <author>Longfu Luo</author>
-        <author>Yong Li 0016</author>
-        <author>Rong Han</author>
-        <author>Yanjian Peng</author>
-        <title>An Improved Radial Buckling Analysis Method and Test Investigation for Power Transformer under Short Circuit Impact.</title>
-        <year>2023</year>
-        <month>February</month>
-        <ee>https://doi.org/10.21227/t80s-ha24</ee>
-        <publisher>IEEE DataPort</publisher>
-    </data>
 </dblp>

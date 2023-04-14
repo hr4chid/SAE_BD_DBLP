@@ -1,6 +1,5 @@
 package ClasseDAO;
 
-import Classes.CoAuthors;
 import Initializer.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

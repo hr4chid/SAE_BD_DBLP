@@ -1,7 +1,7 @@
 package Main;
 
 import ClasseDAO.*;
-import Classes.*;
+import ClassesObject.*;
 import Initializer.DBConnector;
 import Initializer.LoadXML;
 
