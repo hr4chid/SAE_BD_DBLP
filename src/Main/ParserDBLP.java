@@ -1,9 +1,9 @@
 package Main;
 
-import ClasseDAO.*;
+import ClassesDAO.*;
 import ClassesObject.*;
-import Initializer.DBConnector;
-import Initializer.LoadXML;
+import Initializers.DBConnector;
+import Initializers.LoadXML;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

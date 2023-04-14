@@ -1,4 +1,4 @@
-package Initializer;
+package Initializers;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

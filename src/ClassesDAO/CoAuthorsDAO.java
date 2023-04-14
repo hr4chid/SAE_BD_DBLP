@@ -1,6 +1,6 @@
-package ClasseDAO;
+package ClassesDAO;
 
-import Initializer.DBConnector;
+import Initializers.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
