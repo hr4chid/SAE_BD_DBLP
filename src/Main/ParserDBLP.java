@@ -546,6 +546,7 @@ public class ParserDBLP {
                 autheurDAO.updateLastPaperAuthor();
 
 
+
                 // Update des affiliations dans la table Authors
                 autheurDAO.updateAuthorAffiliations();
 
@@ -563,6 +564,6 @@ public class ParserDBLP {
         } catch (SAXException ex) {
             throw new RuntimeException(ex);
         }
-
     }
+
 }
